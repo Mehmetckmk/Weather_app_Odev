@@ -1,0 +1,2192 @@
+[
+  {
+    "Tarih": "1.01.2023",
+    "En Düsük": -5,
+    "En Yüksek": 5,
+    "Ortalama": 0
+  },
+  {
+    "Tarih": "2.01.2023",
+    "En Düsük": -4.9,
+    "En Yüksek": 5.2,
+    "Ortalama": 0.1
+  },
+  {
+    "Tarih": "3.01.2023",
+    "En Düsük": -4.8,
+    "En Yüksek": 5.3,
+    "Ortalama": 0.2
+  },
+  {
+    "Tarih": "4.01.2023",
+    "En Düsük": -4.7,
+    "En Yüksek": 5.5,
+    "Ortalama": 0.4
+  },
+  {
+    "Tarih": "5.01.2023",
+    "En Düsük": -4.6,
+    "En Yüksek": 5.6,
+    "Ortalama": 0.5
+  },
+  {
+    "Tarih": "6.01.2023",
+    "En Düsük": -4.5,
+    "En Yüksek": 5.8,
+    "Ortalama": 0.6
+  },
+  {
+    "Tarih": "7.01.2023",
+    "En Düsük": -4.4,
+    "En Yüksek": 5.9,
+    "Ortalama": 0.7
+  },
+  {
+    "Tarih": "8.01.2023",
+    "En Düsük": -4.3,
+    "En Yüksek": 6,
+    "Ortalama": 0.8
+  },
+  {
+    "Tarih": "9.01.2023",
+    "En Düsük": -4.2,
+    "En Yüksek": 6.2,
+    "Ortalama": 1
+  },
+  {
+    "Tarih": "10.01.2023",
+    "En Düsük": -4.1,
+    "En Yüksek": 6.3,
+    "Ortalama": 1.1
+  },
+  {
+    "Tarih": "11.01.2023",
+    "En Düsük": -4,
+    "En Yüksek": 6.5,
+    "Ortalama": 1.2
+  },
+  {
+    "Tarih": "12.01.2023",
+    "En Düsük": -3.9,
+    "En Yüksek": 6.7,
+    "Ortalama": 1.3
+  },
+  {
+    "Tarih": "13.01.2023",
+    "En Düsük": -3.8,
+    "En Yüksek": 6.8,
+    "Ortalama": 1.4
+  },
+  {
+    "Tarih": "14.01.2023",
+    "En Düsük": -3.7,
+    "En Yüksek": 7,
+    "Ortalama": 1.6
+  },
+  {
+    "Tarih": "15.01.2023",
+    "En Düsük": -3.6,
+    "En Yüksek": 7.1,
+    "Ortalama": 1.7
+  },
+  {
+    "Tarih": "16.01.2023",
+    "En Düsük": -3.5,
+    "En Yüksek": 7.2,
+    "Ortalama": 1.8
+  },
+  {
+    "Tarih": "17.01.2023",
+    "En Düsük": -3.4,
+    "En Yüksek": 7.4,
+    "Ortalama": 1.9
+  },
+  {
+    "Tarih": "18.01.2023",
+    "En Düsük": -3.3,
+    "En Yüksek": 7.5,
+    "Ortalama": 2
+  },
+  {
+    "Tarih": "19.01.2023",
+    "En Düsük": -3.2,
+    "En Yüksek": 7.7,
+    "Ortalama": 2.2
+  },
+  {
+    "Tarih": "20.01.2023",
+    "En Düsük": -3.1,
+    "En Yüksek": 7.8,
+    "Ortalama": 2.3
+  },
+  {
+    "Tarih": "21.01.2023",
+    "En Düsük": -3,
+    "En Yüksek": 8,
+    "Ortalama": 2.4
+  },
+  {
+    "Tarih": "22.01.2023",
+    "En Düsük": -2.9,
+    "En Yüksek": 8.2,
+    "Ortalama": 2.5
+  },
+  {
+    "Tarih": "23.01.2023",
+    "En Düsük": -2.8,
+    "En Yüksek": 8.3,
+    "Ortalama": 2.6
+  },
+  {
+    "Tarih": "24.01.2023",
+    "En Düsük": -2.7,
+    "En Yüksek": 8.4,
+    "Ortalama": 2.8
+  },
+  {
+    "Tarih": "25.01.2023",
+    "En Düsük": -2.6,
+    "En Yüksek": 8.6,
+    "Ortalama": 2.9
+  },
+  {
+    "Tarih": "26.01.2023",
+    "En Düsük": -2.5,
+    "En Yüksek": 8.8,
+    "Ortalama": 3
+  },
+  {
+    "Tarih": "27.01.2023",
+    "En Düsük": -2.4,
+    "En Yüksek": 8.9,
+    "Ortalama": 3.1
+  },
+  {
+    "Tarih": "28.01.2023",
+    "En Düsük": -2.3,
+    "En Yüksek": 9.1,
+    "Ortalama": 3.2
+  },
+  {
+    "Tarih": "29.01.2023",
+    "En Düsük": -2.2,
+    "En Yüksek": 9.2,
+    "Ortalama": 3.4
+  },
+  {
+    "Tarih": "30.01.2023",
+    "En Düsük": -2.1,
+    "En Yüksek": 9.3,
+    "Ortalama": 3.5
+  },
+  {
+    "Tarih": "31.01.2023",
+    "En Düsük": -2,
+    "En Yüksek": 9.5,
+    "Ortalama": 3.6
+  },
+  {
+    "Tarih": "1.02.2023",
+    "En Düsük": -1.9,
+    "En Yüksek": 9.6,
+    "Ortalama": 3.7
+  },
+  {
+    "Tarih": "2.02.2023",
+    "En Düsük": -1.8,
+    "En Yüksek": 9.8,
+    "Ortalama": 3.8
+  },
+  {
+    "Tarih": "3.02.2023",
+    "En Düsük": -1.7,
+    "En Yüksek": 9.9,
+    "Ortalama": 4
+  },
+  {
+    "Tarih": "4.02.2023",
+    "En Düsük": -1.6,
+    "En Yüksek": 10.1,
+    "Ortalama": 4.1
+  },
+  {
+    "Tarih": "5.02.2023",
+    "En Düsük": -1.5,
+    "En Yüksek": 10.2,
+    "Ortalama": 4.2
+  },
+  {
+    "Tarih": "6.02.2023",
+    "En Düsük": -1.4,
+    "En Yüksek": 10.4,
+    "Ortalama": 4.3
+  },
+  {
+    "Tarih": "7.02.2023",
+    "En Düsük": -1.3,
+    "En Yüksek": 10.6,
+    "Ortalama": 4.4
+  },
+  {
+    "Tarih": "8.02.2023",
+    "En Düsük": -1.2,
+    "En Yüksek": 10.7,
+    "Ortalama": 4.6
+  },
+  {
+    "Tarih": "9.02.2023",
+    "En Düsük": -1.1,
+    "En Yüksek": 10.8,
+    "Ortalama": 4.7
+  },
+  {
+    "Tarih": "10.02.2023",
+    "En Düsük": -1,
+    "En Yüksek": 11,
+    "Ortalama": 4.8
+  },
+  {
+    "Tarih": "11.02.2023",
+    "En Düsük": -0.9,
+    "En Yüksek": 11.1,
+    "Ortalama": 4.9
+  },
+  {
+    "Tarih": "12.02.2023",
+    "En Düsük": -0.8,
+    "En Yüksek": 11.3,
+    "Ortalama": 5
+  },
+  {
+    "Tarih": "13.02.2023",
+    "En Düsük": -0.7,
+    "En Yüksek": 11.4,
+    "Ortalama": 5.2
+  },
+  {
+    "Tarih": "14.02.2023",
+    "En Düsük": -0.6,
+    "En Yüksek": 11.6,
+    "Ortalama": 5.3
+  },
+  {
+    "Tarih": "15.02.2023",
+    "En Düsük": -0.5,
+    "En Yüksek": 11.8,
+    "Ortalama": 5.4
+  },
+  {
+    "Tarih": "16.02.2023",
+    "En Düsük": -0.4,
+    "En Yüksek": 11.9,
+    "Ortalama": 5.5
+  },
+  {
+    "Tarih": "17.02.2023",
+    "En Düsük": -0.3,
+    "En Yüksek": 12.1,
+    "Ortalama": 5.6
+  },
+  {
+    "Tarih": "18.02.2023",
+    "En Düsük": -0.2,
+    "En Yüksek": 12.2,
+    "Ortalama": 5.8
+  },
+  {
+    "Tarih": "19.02.2023",
+    "En Düsük": -0.1,
+    "En Yüksek": 12.3,
+    "Ortalama": 5.9
+  },
+  {
+    "Tarih": "20.02.2023",
+    "En Düsük": 0,
+    "En Yüksek": 12.5,
+    "Ortalama": 6
+  },
+  {
+    "Tarih": "21.02.2023",
+    "En Düsük": 0.1,
+    "En Yüksek": 12.6,
+    "Ortalama": 6.1
+  },
+  {
+    "Tarih": "22.02.2023",
+    "En Düsük": 0.2,
+    "En Yüksek": 12.8,
+    "Ortalama": 6.2
+  },
+  {
+    "Tarih": "23.02.2023",
+    "En Düsük": 0.3,
+    "En Yüksek": 12.9,
+    "Ortalama": 6.4
+  },
+  {
+    "Tarih": "24.02.2023",
+    "En Düsük": 0.4,
+    "En Yüksek": 13.1,
+    "Ortalama": 6.5
+  },
+  {
+    "Tarih": "25.02.2023",
+    "En Düsük": 0.5,
+    "En Yüksek": 13.2,
+    "Ortalama": 6.6
+  },
+  {
+    "Tarih": "26.02.2023",
+    "En Düsük": 0.6,
+    "En Yüksek": 13.4,
+    "Ortalama": 6.7
+  },
+  {
+    "Tarih": "27.02.2023",
+    "En Düsük": 0.7,
+    "En Yüksek": 13.5,
+    "Ortalama": 6.8
+  },
+  {
+    "Tarih": "28.02.2023",
+    "En Düsük": 0.8,
+    "En Yüksek": 13.7,
+    "Ortalama": 7
+  },
+  {
+    "Tarih": "1.03.2023",
+    "En Düsük": 0.9,
+    "En Yüksek": 13.8,
+    "Ortalama": 7.1
+  },
+  {
+    "Tarih": "2.03.2023",
+    "En Düsük": 1,
+    "En Yüksek": 14,
+    "Ortalama": 7.2
+  },
+  {
+    "Tarih": "3.03.2023",
+    "En Düsük": 1.1,
+    "En Yüksek": 14.2,
+    "Ortalama": 7.3
+  },
+  {
+    "Tarih": "4.03.2023",
+    "En Düsük": 1.2,
+    "En Yüksek": 14.3,
+    "Ortalama": 7.4
+  },
+  {
+    "Tarih": "5.03.2023",
+    "En Düsük": 1.3,
+    "En Yüksek": 14.4,
+    "Ortalama": 7.6
+  },
+  {
+    "Tarih": "6.03.2023",
+    "En Düsük": 1.4,
+    "En Yüksek": 14.6,
+    "Ortalama": 7.7
+  },
+  {
+    "Tarih": "7.03.2023",
+    "En Düsük": 1.5,
+    "En Yüksek": 14.8,
+    "Ortalama": 7.8
+  },
+  {
+    "Tarih": "8.03.2023",
+    "En Düsük": 1.6,
+    "En Yüksek": 14.9,
+    "Ortalama": 7.9
+  },
+  {
+    "Tarih": "9.03.2023",
+    "En Düsük": 1.7,
+    "En Yüksek": 15,
+    "Ortalama": 8
+  },
+  {
+    "Tarih": "10.03.2023",
+    "En Düsük": 1.8,
+    "En Yüksek": 15.2,
+    "Ortalama": 8.2
+  },
+  {
+    "Tarih": "11.03.2023",
+    "En Düsük": 1.9,
+    "En Yüksek": 15.3,
+    "Ortalama": 8.3
+  },
+  {
+    "Tarih": "12.03.2023",
+    "En Düsük": 2,
+    "En Yüksek": 15.5,
+    "Ortalama": 8.4
+  },
+  {
+    "Tarih": "13.03.2023",
+    "En Düsük": 2.1,
+    "En Yüksek": 15.7,
+    "Ortalama": 8.5
+  },
+  {
+    "Tarih": "14.03.2023",
+    "En Düsük": 2.2,
+    "En Yüksek": 15.8,
+    "Ortalama": 8.6
+  },
+  {
+    "Tarih": "15.03.2023",
+    "En Düsük": 2.3,
+    "En Yüksek": 15.9,
+    "Ortalama": 8.8
+  },
+  {
+    "Tarih": "16.03.2023",
+    "En Düsük": 2.4,
+    "En Yüksek": 16.1,
+    "Ortalama": 8.9
+  },
+  {
+    "Tarih": "17.03.2023",
+    "En Düsük": 2.5,
+    "En Yüksek": 16.2,
+    "Ortalama": 9
+  },
+  {
+    "Tarih": "18.03.2023",
+    "En Düsük": 2.6,
+    "En Yüksek": 16.4,
+    "Ortalama": 9.1
+  },
+  {
+    "Tarih": "19.03.2023",
+    "En Düsük": 2.7,
+    "En Yüksek": 16.5,
+    "Ortalama": 9.2
+  },
+  {
+    "Tarih": "20.03.2023",
+    "En Düsük": 2.8,
+    "En Yüksek": 16.7,
+    "Ortalama": 9.4
+  },
+  {
+    "Tarih": "21.03.2023",
+    "En Düsük": 2.9,
+    "En Yüksek": 16.9,
+    "Ortalama": 9.5
+  },
+  {
+    "Tarih": "22.03.2023",
+    "En Düsük": 3,
+    "En Yüksek": 17,
+    "Ortalama": 9.6
+  },
+  {
+    "Tarih": "23.03.2023",
+    "En Düsük": 3.1,
+    "En Yüksek": 17.1,
+    "Ortalama": 9.7
+  },
+  {
+    "Tarih": "24.03.2023",
+    "En Düsük": 3.2,
+    "En Yüksek": 17.3,
+    "Ortalama": 9.8
+  },
+  {
+    "Tarih": "25.03.2023",
+    "En Düsük": 3.3,
+    "En Yüksek": 17.4,
+    "Ortalama": 10
+  },
+  {
+    "Tarih": "26.03.2023",
+    "En Düsük": 3.4,
+    "En Yüksek": 17.6,
+    "Ortalama": 10.1
+  },
+  {
+    "Tarih": "27.03.2023",
+    "En Düsük": 3.5,
+    "En Yüksek": 17.8,
+    "Ortalama": 10.2
+  },
+  {
+    "Tarih": "28.03.2023",
+    "En Düsük": 3.6,
+    "En Yüksek": 17.9,
+    "Ortalama": 10.3
+  },
+  {
+    "Tarih": "29.03.2023",
+    "En Düsük": 3.7,
+    "En Yüksek": 18,
+    "Ortalama": 10.4
+  },
+  {
+    "Tarih": "30.03.2023",
+    "En Düsük": 3.8,
+    "En Yüksek": 18.2,
+    "Ortalama": 10.6
+  },
+  {
+    "Tarih": "31.03.2023",
+    "En Düsük": 3.9,
+    "En Yüksek": 18.4,
+    "Ortalama": 10.7
+  },
+  {
+    "Tarih": "1.04.2023",
+    "En Düsük": 4,
+    "En Yüksek": 18.5,
+    "Ortalama": 10.8
+  },
+  {
+    "Tarih": "2.04.2023",
+    "En Düsük": 4.1,
+    "En Yüksek": 18.6,
+    "Ortalama": 10.9
+  },
+  {
+    "Tarih": "3.04.2023",
+    "En Düsük": 4.2,
+    "En Yüksek": 18.8,
+    "Ortalama": 11
+  },
+  {
+    "Tarih": "4.04.2023",
+    "En Düsük": 4.3,
+    "En Yüksek": 18.9,
+    "Ortalama": 11.2
+  },
+  {
+    "Tarih": "5.04.2023",
+    "En Düsük": 4.4,
+    "En Yüksek": 19.1,
+    "Ortalama": 11.3
+  },
+  {
+    "Tarih": "6.04.2023",
+    "En Düsük": 4.5,
+    "En Yüksek": 19.2,
+    "Ortalama": 11.4
+  },
+  {
+    "Tarih": "7.04.2023",
+    "En Düsük": 4.6,
+    "En Yüksek": 19.4,
+    "Ortalama": 11.5
+  },
+  {
+    "Tarih": "8.04.2023",
+    "En Düsük": 4.7,
+    "En Yüksek": 19.5,
+    "Ortalama": 11.6
+  },
+  {
+    "Tarih": "9.04.2023",
+    "En Düsük": 4.8,
+    "En Yüksek": 19.7,
+    "Ortalama": 11.8
+  },
+  {
+    "Tarih": "10.04.2023",
+    "En Düsük": 4.9,
+    "En Yüksek": 19.9,
+    "Ortalama": 11.9
+  },
+  {
+    "Tarih": "11.04.2023",
+    "En Düsük": 5,
+    "En Yüksek": 20,
+    "Ortalama": 12
+  },
+  {
+    "Tarih": "12.04.2023",
+    "En Düsük": 5.1,
+    "En Yüksek": 20.1,
+    "Ortalama": 12.1
+  },
+  {
+    "Tarih": "13.04.2023",
+    "En Düsük": 5.2,
+    "En Yüksek": 20.3,
+    "Ortalama": 12.2
+  },
+  {
+    "Tarih": "14.04.2023",
+    "En Düsük": 5.3,
+    "En Yüksek": 20.4,
+    "Ortalama": 12.4
+  },
+  {
+    "Tarih": "15.04.2023",
+    "En Düsük": 5.4,
+    "En Yüksek": 20.6,
+    "Ortalama": 12.5
+  },
+  {
+    "Tarih": "16.04.2023",
+    "En Düsük": 5.5,
+    "En Yüksek": 20.8,
+    "Ortalama": 12.6
+  },
+  {
+    "Tarih": "17.04.2023",
+    "En Düsük": 5.6,
+    "En Yüksek": 20.9,
+    "Ortalama": 12.7
+  },
+  {
+    "Tarih": "18.04.2023",
+    "En Düsük": 5.7,
+    "En Yüksek": 21.1,
+    "Ortalama": 12.8
+  },
+  {
+    "Tarih": "19.04.2023",
+    "En Düsük": 5.8,
+    "En Yüksek": 21.2,
+    "Ortalama": 13
+  },
+  {
+    "Tarih": "20.04.2023",
+    "En Düsük": 5.9,
+    "En Yüksek": 21.3,
+    "Ortalama": 13.1
+  },
+  {
+    "Tarih": "21.04.2023",
+    "En Düsük": 6,
+    "En Yüksek": 21.5,
+    "Ortalama": 13.2
+  },
+  {
+    "Tarih": "22.04.2023",
+    "En Düsük": 6.1,
+    "En Yüksek": 21.6,
+    "Ortalama": 13.3
+  },
+  {
+    "Tarih": "23.04.2023",
+    "En Düsük": 6.2,
+    "En Yüksek": 21.8,
+    "Ortalama": 13.4
+  },
+  {
+    "Tarih": "24.04.2023",
+    "En Düsük": 6.3,
+    "En Yüksek": 21.9,
+    "Ortalama": 13.6
+  },
+  {
+    "Tarih": "25.04.2023",
+    "En Düsük": 6.4,
+    "En Yüksek": 22.1,
+    "Ortalama": 13.7
+  },
+  {
+    "Tarih": "26.04.2023",
+    "En Düsük": 6.5,
+    "En Yüksek": 22.2,
+    "Ortalama": 13.8
+  },
+  {
+    "Tarih": "27.04.2023",
+    "En Düsük": 6.6,
+    "En Yüksek": 22.4,
+    "Ortalama": 13.9
+  },
+  {
+    "Tarih": "28.04.2023",
+    "En Düsük": 6.7,
+    "En Yüksek": 22.6,
+    "Ortalama": 14
+  },
+  {
+    "Tarih": "29.04.2023",
+    "En Düsük": 6.8,
+    "En Yüksek": 22.7,
+    "Ortalama": 14.2
+  },
+  {
+    "Tarih": "30.04.2023",
+    "En Düsük": 6.9,
+    "En Yüksek": 22.8,
+    "Ortalama": 14.3
+  },
+  {
+    "Tarih": "1.05.2023",
+    "En Düsük": 7,
+    "En Yüksek": 23,
+    "Ortalama": 14.4
+  },
+  {
+    "Tarih": "2.05.2023",
+    "En Düsük": 7.1,
+    "En Yüksek": 23.1,
+    "Ortalama": 14.5
+  },
+  {
+    "Tarih": "3.05.2023",
+    "En Düsük": 7.2,
+    "En Yüksek": 23.3,
+    "Ortalama": 14.6
+  },
+  {
+    "Tarih": "4.05.2023",
+    "En Düsük": 7.3,
+    "En Yüksek": 23.4,
+    "Ortalama": 14.8
+  },
+  {
+    "Tarih": "5.05.2023",
+    "En Düsük": 7.4,
+    "En Yüksek": 23.6,
+    "Ortalama": 14.9
+  },
+  {
+    "Tarih": "6.05.2023",
+    "En Düsük": 7.5,
+    "En Yüksek": 23.8,
+    "Ortalama": 15.0
+  },
+  {
+    "Tarih": "7.05.2023",
+    "En Düsük": 7.6,
+    "En Yüksek": 23.9,
+    "Ortalama": 15.1
+  },
+  {
+    "Tarih": "8.05.2023",
+    "En Düsük": 7.7,
+    "En Yüksek": 24.1,
+    "Ortalama": 15.2
+  },
+  {
+    "Tarih": "9.05.2023",
+    "En Düsük": 7.8,
+    "En Yüksek": 24.2,
+    "Ortalama": 15.4
+  },
+  {
+    "Tarih": "10.05.2023",
+    "En Düsük": 7.9,
+    "En Yüksek": 24.3,
+    "Ortalama": 15.5
+  },
+  {
+    "Tarih": "11.05.2023",
+    "En Düsük": 8.0,
+    "En Yüksek": 24.5,
+    "Ortalama": 15.6
+  },
+  {
+    "Tarih": "12.05.2023",
+    "En Düsük": 8.1,
+    "En Yüksek": 24.6,
+    "Ortalama": 15.7
+  },
+  {
+    "Tarih": "13.05.2023",
+    "En Düsük": 8.2,
+    "En Yüksek": 24.8,
+    "Ortalama": 15.8
+  },
+  {
+    "Tarih": "14.05.2023",
+    "En Düsük": 8.3,
+    "En Yüksek": 24.9,
+    "Ortalama": 16.0
+  },
+  {
+    "Tarih": "15.05.2023",
+    "En Düsük": 8.4,
+    "En Yüksek": 25.1,
+    "Ortalama": 16.1
+  },
+  {
+    "Tarih": "16.05.2023",
+    "En Düsük": 8.5,
+    "En Yüksek": 25.2,
+    "Ortalama": 16.2
+  },
+  {
+    "Tarih": "17.05.2023",
+    "En Düsük": 8.6,
+    "En Yüksek": 25.4,
+    "Ortalama": 16.3
+  },
+  {
+    "Tarih": "18.05.2023",
+    "En Düsük": 8.7,
+    "En Yüksek": 25.6,
+    "Ortalama": 16.4
+  },
+  {
+    "Tarih": "19.05.2023",
+    "En Düsük": 8.8,
+    "En Yüksek": 25.7,
+    "Ortalama": 16.6
+  },
+  {
+    "Tarih": "20.05.2023",
+    "En Düsük": 8.9,
+    "En Yüksek": 25.8,
+    "Ortalama": 16.7
+  },
+  {
+    "Tarih": "21.05.2023",
+    "En Düsük": 9.0,
+    "En Yüksek": 26.0,
+    "Ortalama": 16.8
+  },
+  {
+    "Tarih": "22.05.2023",
+    "En Düsük": 9.1,
+    "En Yüksek": 26.1,
+    "Ortalama": 16.9
+  },
+  {
+    "Tarih": "23.05.2023",
+    "En Düsük": 9.2,
+    "En Yüksek": 26.3,
+    "Ortalama": 17.0
+  },
+  {
+    "Tarih": "24.05.2023",
+    "En Düsük": 9.3,
+    "En Yüksek": 26.4,
+    "Ortalama": 17.2
+  },
+  {
+    "Tarih": "25.05.2023",
+    "En Düsük": 9.4,
+    "En Yüksek": 26.6,
+    "Ortalama": 17.3
+  },
+  {
+    "Tarih": "26.05.2023",
+    "En Düsük": 9.5,
+    "En Yüksek": 26.8,
+    "Ortalama": 17.4
+  },
+  {
+    "Tarih": "27.05.2023",
+    "En Düsük": 9.6,
+    "En Yüksek": 26.9,
+    "Ortalama": 17.5
+  },
+  {
+    "Tarih": "28.05.2023",
+    "En Düsük": 9.7,
+    "En Yüksek": 27.1,
+    "Ortalama": 17.6
+  },
+  {
+    "Tarih": "29.05.2023",
+    "En Düsük": 9.8,
+    "En Yüksek": 27.2,
+    "Ortalama": 17.8
+  },
+  {
+    "Tarih": "30.05.2023",
+    "En Düsük": 9.9,
+    "En Yüksek": 27.3,
+    "Ortalama": 17.9
+  },
+  {
+    "Tarih": "31.05.2023",
+    "En Düsük": 10,
+    "En Yüksek": 27.5,
+    "Ortalama": 18
+  },
+  {
+    "Tarih": "1.06.2023",
+    "En Düsük": 10.1,
+    "En Yüksek": 27.6,
+    "Ortalama": 18.1
+  },
+  {
+    "Tarih": "2.06.2023",
+    "En Düsük": 10.2,
+    "En Yüksek": 27.8,
+    "Ortalama": 18.2
+  },
+  {
+    "Tarih": "3.06.2023",
+    "En Düsük": 10.3,
+    "En Yüksek": 27.9,
+    "Ortalama": 18.4
+  },
+  {
+    "Tarih": "4.06.2023",
+    "En Düsük": 10.4,
+    "En Yüksek": 28.1,
+    "Ortalama": 18.5
+  },
+  {
+    "Tarih": "5.06.2023",
+    "En Düsük": 10.5,
+    "En Yüksek": 28.2,
+    "Ortalama": 18.6
+  },
+  {
+    "Tarih": "6.06.2023",
+    "En Düsük": 10.6,
+    "En Yüksek": 28.4,
+    "Ortalama": 18.7
+  },
+  {
+    "Tarih": "7.06.2023",
+    "En Düsük": 10.7,
+    "En Yüksek": 28.6,
+    "Ortalama": 18.8
+  },
+  {
+    "Tarih": "8.06.2023",
+    "En Düsük": 10.8,
+    "En Yüksek": 28.7,
+    "Ortalama": 19
+  },
+  {
+    "Tarih": "9.06.2023",
+    "En Düsük": 10.9,
+    "En Yüksek": 28.8,
+    "Ortalama": 19.1
+  },
+  {
+    "Tarih": "10.06.2023",
+    "En Düsük": 11,
+    "En Yüksek": 29,
+    "Ortalama": 19.2
+  },
+  {
+    "Tarih": "11.06.2023",
+    "En Düsük": 11.1,
+    "En Yüksek": 29.1,
+    "Ortalama": 19.3
+  },
+  {
+    "Tarih": "12.06.2023",
+    "En Düsük": 11.2,
+    "En Yüksek": 29.3,
+    "Ortalama": 19.4
+  },
+  {
+    "Tarih": "13.06.2023",
+    "En Düsük": 11.3,
+    "En Yüksek": 29.4,
+    "Ortalama": 19.6
+  },
+  {
+    "Tarih": "14.06.2023",
+    "En Düsük": 11.4,
+    "En Yüksek": 29.6,
+    "Ortalama": 19.7
+  },
+  {
+    "Tarih": "15.06.2023",
+    "En Düsük": 11.5,
+    "En Yüksek": 29.8,
+    "Ortalama": 19.8
+  },
+  {
+    "Tarih": "16.06.2023",
+    "En Düsük": 11.6,
+    "En Yüksek": 29.9,
+    "Ortalama": 19.9
+  },
+  {
+    "Tarih": "17.06.2023",
+    "En Düsük": 11.7,
+    "En Yüksek": 30.1,
+    "Ortalama": 20
+  },
+  {
+    "Tarih": "18.06.2023",
+    "En Düsük": 11.8,
+    "En Yüksek": 30.2,
+    "Ortalama": 20.2
+  },
+  {
+    "Tarih": "19.06.2023",
+    "En Düsük": 11.9,
+    "En Yüksek": 30.3,
+    "Ortalama": 20.3
+  },
+  {
+    "Tarih": "20.06.2023",
+    "En Düsük": 12,
+    "En Yüksek": 30.5,
+    "Ortalama": 20.4
+  },
+  {
+    "Tarih": "21.06.2023",
+    "En Düsük": 12.1,
+    "En Yüksek": 30.6,
+    "Ortalama": 20.5
+  },
+  {
+    "Tarih": "22.06.2023",
+    "En Düsük": 12.2,
+    "En Yüksek": 30.8,
+    "Ortalama": 20.6
+  },
+  {
+    "Tarih": "23.06.2023",
+    "En Düsük": 12.3,
+    "En Yüksek": 30.9,
+    "Ortalama": 20.8
+  },
+  {
+    "Tarih": "24.06.2023",
+    "En Düsük": 12.4,
+    "En Yüksek": 31.1,
+    "Ortalama": 20.9
+  },
+  {
+    "Tarih": "25.06.2023",
+    "En Düsük": 12.5,
+    "En Yüksek": 31.2,
+    "Ortalama": 21
+  },
+  {
+    "Tarih": "26.06.2023",
+    "En Düsük": 12.6,
+    "En Yüksek": 31.4,
+    "Ortalama": 21.1
+  },
+  {
+    "Tarih": "27.06.2023",
+    "En Düsük": 12.7,
+    "En Yüksek": 31.6,
+    "Ortalama": 21.2
+  },
+  {
+    "Tarih": "28.06.2023",
+    "En Düsük": 12.8,
+    "En Yüksek": 31.7,
+    "Ortalama": 21.4
+  },
+  {
+    "Tarih": "29.06.2023",
+    "En Düsük": 12.9,
+    "En Yüksek": 31.8,
+    "Ortalama": 21.5
+  },
+  {
+    "Tarih": "30.06.2023",
+    "En Düsük": 13,
+    "En Yüksek": 32,
+    "Ortalama": 21.6
+  },
+  {
+    "Tarih": "1.07.2023",
+    "En Düsük": 13.1,
+    "En Yüksek": 32.1,
+    "Ortalama": 21.7
+  },
+  {
+    "Tarih": "2.07.2023",
+    "En Düsük": 13.2,
+    "En Yüksek": 32.3,
+    "Ortalama": 21.8
+  },
+  {
+    "Tarih": "3.07.2023",
+    "En Düsük": 13.3,
+    "En Yüksek": 32.5,
+    "Ortalama": 22
+  },
+  {
+    "Tarih": "4.07.2023",
+    "En Düsük": 13.4,
+    "En Yüksek": 32.6,
+    "Ortalama": 22.1
+  },
+  {
+    "Tarih": "5.07.2023",
+    "En Düsük": 13.5,
+    "En Yüksek": 32.8,
+    "Ortalama": 22.2
+  },
+  {
+    "Tarih": "6.07.2023",
+    "En Düsük": 13.6,
+    "En Yüksek": 32.9,
+    "Ortalama": 22.3
+  },
+  {
+    "Tarih": "7.07.2023",
+    "En Düsük": 13.7,
+    "En Yüksek": 33,
+    "Ortalama": 22.4
+  },
+  {
+    "Tarih": "8.07.2023",
+    "En Düsük": 13.8,
+    "En Yüksek": 33.2,
+    "Ortalama": 22.6
+  },
+  {
+    "Tarih": "9.07.2023",
+    "En Düsük": 13.9,
+    "En Yüksek": 33.3,
+    "Ortalama": 22.7
+  },
+  {
+    "Tarih": "10.07.2023",
+    "En Düsük": 14,
+    "En Yüksek": 33.5,
+    "Ortalama": 22.8
+  },
+  {
+    "Tarih": "11.07.2023",
+    "En Düsük": 14.1,
+    "En Yüksek": 33.6,
+    "Ortalama": 22.9
+  },
+  {
+    "Tarih": "12.07.2023",
+    "En Düsük": 14.2,
+    "En Yüksek": 33.8,
+    "Ortalama": 23
+  },
+  {
+    "Tarih": "13.07.2023",
+    "En Düsük": 14.3,
+    "En Yüksek": 34,
+    "Ortalama": 23.2
+  },
+  {
+    "Tarih": "14.07.2023",
+    "En Düsük": 14.4,
+    "En Yüksek": 34.1,
+    "Ortalama": 23.3
+  },
+  {
+    "Tarih": "15.07.2023",
+    "En Düsük": 14.5,
+    "En Yüksek": 34.2,
+    "Ortalama": 23.4
+  },
+  {
+    "Tarih": "16.07.2023",
+    "En Düsük": 14.6,
+    "En Yüksek": 34.4,
+    "Ortalama": 23.5
+  },
+  {
+    "Tarih": "17.07.2023",
+    "En Düsük": 14.7,
+    "En Yüksek": 34.5,
+    "Ortalama": 23.6
+  },
+  {
+    "Tarih": "18.07.2023",
+    "En Düsük": 14.8,
+    "En Yüksek": 34.7,
+    "Ortalama": 23.8
+  },
+  {
+    "Tarih": "19.07.2023",
+    "En Düsük": 14.9,
+    "En Yüksek": 34.8,
+    "Ortalama": 23.9
+  },
+  {
+    "Tarih": "20.07.2023",
+    "En Düsük": 15,
+    "En Yüksek": 35,
+    "Ortalama": 24
+  },
+  {
+    "Tarih": "21.07.2023",
+    "En Düsük": 15.1,
+    "En Yüksek": 35.1,
+    "Ortalama": 24.1
+  },
+  {
+    "Tarih": "22.07.2023",
+    "En Düsük": 15.2,
+    "En Yüksek": 35.3,
+    "Ortalama": 24.2
+  },
+  {
+    "Tarih": "23.07.2023",
+    "En Düsük": 15.3,
+    "En Yüksek": 35.5,
+    "Ortalama": 24.4
+  },
+  {
+    "Tarih": "24.07.2023",
+    "En Düsük": 15.4,
+    "En Yüksek": 35.6,
+    "Ortalama": 24.5
+  },
+  {
+    "Tarih": "25.07.2023",
+    "En Düsük": 15.5,
+    "En Yüksek": 35.8,
+    "Ortalama": 24.6
+  },
+  {
+    "Tarih": "26.07.2023",
+    "En Düsük": 15.6,
+    "En Yüksek": 35.9,
+    "Ortalama": 24.7
+  },
+  {
+    "Tarih": "27.07.2023",
+    "En Düsük": 15.7,
+    "En Yüksek": 36,
+    "Ortalama": 24.8
+  },
+  {
+    "Tarih": "28.07.2023",
+    "En Düsük": 15.8,
+    "En Yüksek": 36.2,
+    "Ortalama": 25
+  },
+  {
+    "Tarih": "29.07.2023",
+    "En Düsük": 15.9,
+    "En Yüksek": 36.3,
+    "Ortalama": 25.1
+  },
+  {
+    "Tarih": "30.07.2023",
+    "En Düsük": 16,
+    "En Yüksek": 36.5,
+    "Ortalama": 25.2
+  },
+  {
+    "Tarih": "31.07.2023",
+    "En Düsük": 16.1,
+    "En Yüksek": 36.6,
+    "Ortalama": 25.3
+  },
+  {
+    "Tarih": "1.08.2023",
+    "En Düsük": 16.2,
+    "En Yüksek": 36.8,
+    "Ortalama": 25.4
+  },
+  {
+    "Tarih": "2.08.2023",
+    "En Düsük": 16.3,
+    "En Yüksek": 37,
+    "Ortalama": 25.6
+  },
+  {
+    "Tarih": "3.08.2023",
+    "En Düsük": 16.4,
+    "En Yüksek": 37.1,
+    "Ortalama": 25.7
+  },
+  {
+    "Tarih": "4.08.2023",
+    "En Düsük": 16.5,
+    "En Yüksek": 37.2,
+    "Ortalama": 25.8
+  },
+  {
+    "Tarih": "5.08.2023",
+    "En Düsük": 16.6,
+    "En Yüksek": 37.4,
+    "Ortalama": 25.9
+  },
+  {
+    "Tarih": "6.08.2023",
+    "En Düsük": 16.7,
+    "En Yüksek": 37.5,
+    "Ortalama": 26
+  },
+  {
+    "Tarih": "7.08.2023",
+    "En Düşük": 16.8,
+    "En Yüksek": 37.7,
+    "Ortalama": 26.2
+  },
+  {
+    "Tarih": "8.08.2023",
+    "En Düşük": 16.9,
+    "En Yüksek": 37.9,
+    "Ortalama": 26.3
+  },
+  {
+    "Tarih": "9.08.2023",
+    "En Düşük": 17,
+    "En Yüksek": 38,
+    "Ortalama": 26.4
+  },
+  {
+    "Tarih": "10.08.2023",
+    "En Düşük": 17.1,
+    "En Yüksek": 38.1,
+    "Ortalama": 26.5
+  },
+  {
+    "Tarih": "11.08.2023",
+    "En Düşük": 17.2,
+    "En Yüksek": 38.3,
+    "Ortalama": 26.6
+  },
+  {
+    "Tarih": "12.08.2023",
+    "En Düşük": 17.3,
+    "En Yüksek": 38.4,
+    "Ortalama": 26.8
+  },
+  {
+    "Tarih": "13.08.2023",
+    "En Düşük": 17.4,
+    "En Yüksek": 38.6,
+    "Ortalama": 26.9
+  },
+  {
+    "Tarih": "14.08.2023",
+    "En Düşük": 17.5,
+    "En Yüksek": 38.8,
+    "Ortalama": 27
+  },
+  {
+    "Tarih": "15.08.2023",
+    "En Düşük": 17.6,
+    "En Yüksek": 38.9,
+    "Ortalama": 27.1
+  },
+  {
+    "Tarih": "16.08.2023",
+    "En Düşük": 17.7,
+    "En Yüksek": 39,
+    "Ortalama": 27.2
+  },
+  {
+    "Tarih": "17.08.2023",
+    "En Düşük": 17.8,
+    "En Yüksek": 39.2,
+    "Ortalama": 27.4
+  },
+  {
+    "Tarih": "18.08.2023",
+    "En Düşük": 17.9,
+    "En Yüksek": 39.4,
+    "Ortalama": 27.5
+  },
+  {
+    "Tarih": "19.08.2023",
+    "En Düşük": 18,
+    "En Yüksek": 39.5,
+    "Ortalama": 27.6
+  },
+  {
+    "Tarih": "20.08.2023",
+    "En Düşük": 18.1,
+    "En Yüksek": 39.6,
+    "Ortalama": 27.7
+  },
+  {
+    "Tarih": "21.08.2023",
+    "En Düşük": 18.2,
+    "En Yüksek": 39.8,
+    "Ortalama": 27.8
+  },
+  {
+    "Tarih": "22.08.2023",
+    "En Düşük": 18.3,
+    "En Yüksek": 39.9,
+    "Ortalama": 28
+  },
+  {
+    "Tarih": "23.08.2023",
+    "En Düşük": 18.4,
+    "En Yüksek": 40.1,
+    "Ortalama": 28.1
+  },
+  {
+    "Tarih": "24.08.2023",
+    "En Düşük": 18.5,
+    "En Yüksek": 40.2,
+    "Ortalama": 28.2
+  },
+  {
+    "Tarih": "25.08.2023",
+    "En Düşük": 18.6,
+    "En Yüksek": 40.4,
+    "Ortalama": 28.3
+  },
+  {
+    "Tarih": "26.08.2023",
+    "En Düşük": 18.7,
+    "En Yüksek": 40.5,
+    "Ortalama": 28.4
+  },
+  {
+    "Tarih": "27.08.2023",
+    "En Düşük": 18.8,
+    "En Yüksek": 40.7,
+    "Ortalama": 28.6
+  },
+  {
+    "Tarih": "28.08.2023",
+    "En Düşük": 18.9,
+    "En Yüksek": 40.9,
+    "Ortalama": 28.7
+  },
+  {
+    "Tarih": "29.08.2023",
+    "En Düşük": 19,
+    "En Yüksek": 41,
+    "Ortalama": 28.8
+  },
+  {
+    "Tarih": "30.08.2023",
+    "En Düşük": 19.1,
+    "En Yüksek": 41.1,
+    "Ortalama": 28.9
+  },
+  {
+    "Tarih": "31.08.2023",
+    "En Düşük": 19.2,
+    "En Yüksek": 41.3,
+    "Ortalama": 29
+  },
+  {
+    "Tarih": "1.09.2023",
+    "En Düşük": 19.3,
+    "En Yüksek": 41.4,
+    "Ortalama": 29.2
+  },
+  {
+    "Tarih": "2.09.2023",
+    "En Düşük": 19.4,
+    "En Yüksek": 41.6,
+    "Ortalama": 29.3
+  },
+  {
+    "Tarih": "3.09.2023",
+    "En Düşük": 19.5,
+    "En Yüksek": 41.8,
+    "Ortalama": 29.4
+  },
+  {
+    "Tarih": "4.09.2023",
+    "En Düşük": 19.6,
+    "En Yüksek": 41.9,
+    "Ortalama": 29.5
+  },
+  {
+    "Tarih": "5.09.2023",
+    "En Düşük": 19.7,
+    "En Yüksek": 42,
+    "Ortalama": 29.6
+  },
+  {
+    "Tarih": "6.09.2023",
+    "En Düşük": 19.8,
+    "En Yüksek": 42.2,
+    "Ortalama": 29.8
+  },
+  {
+    "Tarih": "7.09.2023",
+    "En Düşük": 19.9,
+    "En Yüksek": 42.4,
+    "Ortalama": 29.9
+  },
+  {
+    "Tarih": "8.09.2023",
+    "En Düşük": 20,
+    "En Yüksek": 42.5,
+    "Ortalama": 30
+  },
+  {
+    "Tarih": "9.09.2023",
+    "En Düşük": 20.1,
+    "En Yüksek": 42.6,
+    "Ortalama": 30.1
+  },
+  {
+    "Tarih": "10.09.2023",
+    "En Düşük": 20.2,
+    "En Yüksek": 42.8,
+    "Ortalama": 30.2
+  },
+  {
+    "Tarih": "11.09.2023",
+    "En Düsük": 20.3,
+    "En Yüksek": 42.9,
+    "Ortalama": 30.4
+  },
+  {
+    "Tarih": "12.09.2023",
+    "En Düsük": 20.4,
+    "En Yüksek": 43.1,
+    "Ortalama": 30.5
+  },
+  {
+    "Tarih": "13.09.2023",
+    "En Düsük": 20.5,
+    "En Yüksek": 43.2,
+    "Ortalama": 30.6
+  },
+  {
+    "Tarih": "14.09.2023",
+    "En Düsük": 20.6,
+    "En Yüksek": 43.4,
+    "Ortalama": 30.7
+  },
+  {
+    "Tarih": "15.09.2023",
+    "En Düsük": 20.7,
+    "En Yüksek": 43.5,
+    "Ortalama": 30.8
+  },
+  {
+    "Tarih": "16.09.2023",
+    "En Düsük": 20.8,
+    "En Yüksek": 43.7,
+    "Ortalama": 31
+  },
+  {
+    "Tarih": "17.09.2023",
+    "En Düsük": 20.9,
+    "En Yüksek": 43.9,
+    "Ortalama": 31.1
+  },
+  {
+    "Tarih": "18.09.2023",
+    "En Düsük": 21,
+    "En Yüksek": 44,
+    "Ortalama": 31.2
+  },
+  {
+    "Tarih": "19.09.2023",
+    "En Düsük": 21.1,
+    "En Yüksek": 44.1,
+    "Ortalama": 31.3
+  },
+  {
+    "Tarih": "20.09.2023",
+    "En Düsük": 21.2,
+    "En Yüksek": 44.3,
+    "Ortalama": 31.4
+  },
+  {
+    "Tarih": "21.09.2023",
+    "En Düsük": 21.3,
+    "En Yüksek": 44.4,
+    "Ortalama": 31.6
+  },
+  {
+    "Tarih": "22.09.2023",
+    "En Düsük": 21.4,
+    "En Yüksek": 44.6,
+    "Ortalama": 31.7
+  },
+  {
+    "Tarih": "23.09.2023",
+    "En Düsük": 21.5,
+    "En Yüksek": 44.8,
+    "Ortalama": 31.8
+  },
+  {
+    "Tarih": "24.09.2023",
+    "En Düsük": 21.6,
+    "En Yüksek": 44.9,
+    "Ortalama": 31.9
+  },
+  {
+    "Tarih": "25.09.2023",
+    "En Düsük": 21.7,
+    "En Yüksek": 45,
+    "Ortalama": 32
+  },
+  {
+    "Tarih": "26.09.2023",
+    "En Düsük": 21.8,
+    "En Yüksek": 45.2,
+    "Ortalama": 32.2
+  },
+  {
+    "Tarih": "27.09.2023",
+    "En Düsük": 21.9,
+    "En Yüksek": 45.4,
+    "Ortalama": 32.3
+  },
+  {
+    "Tarih": "28.09.2023",
+    "En Düsük": 22,
+    "En Yüksek": 45.5,
+    "Ortalama": 32.4
+  },
+  {
+    "Tarih": "29.09.2023",
+    "En Düsük": 22.1,
+    "En Yüksek": 45.6,
+    "Ortalama": 32.5
+  },
+  {
+    "Tarih": "30.09.2023",
+    "En Düsük": 22.2,
+    "En Yüksek": 45.8,
+    "Ortalama": 32.6
+  },
+  {
+    "Tarih": "1.10.2023",
+    "En Düsük": 22.3,
+    "En Yüksek": 45.9,
+    "Ortalama": 32.8
+  },
+  {
+    "Tarih": "2.10.2023",
+    "En Düsük": 22.4,
+    "En Yüksek": 46.1,
+    "Ortalama": 32.9
+  },
+  {
+    "Tarih": "3.10.2023",
+    "En Düsük": 22.5,
+    "En Yüksek": 46.2,
+    "Ortalama": 33
+  },
+  {
+    "Tarih": "4.10.2023",
+    "En Düsük": 22.6,
+    "En Yüksek": 46.4,
+    "Ortalama": 33.1
+  },
+  {
+    "Tarih": "5.10.2023",
+    "En Düsük": 22.7,
+    "En Yüksek": 46.5,
+    "Ortalama": 33.2
+  },
+  {
+    "Tarih": "6.10.2023",
+    "En Düsük": 22.8,
+    "En Yüksek": 46.7,
+    "Ortalama": 33.4
+  },
+  {
+    "Tarih": "7.10.2023",
+    "En Düsük": 22.9,
+    "En Yüksek": 46.9,
+    "Ortalama": 33.5
+  },
+  {
+    "Tarih": "8.10.2023",
+    "En Düsük": 23,
+    "En Yüksek": 47,
+    "Ortalama": 33.6
+  },
+  {
+    "Tarih": "9.10.2023",
+    "En Düsük": 23.1,
+    "En Yüksek": 47.1,
+    "Ortalama": 33.7
+  },
+  {
+    "Tarih": "10.10.2023",
+    "En Düsük": 23.2,
+    "En Yüksek": 47.3,
+    "Ortalama": 33.8
+  },
+  {
+    "Tarih": "11.10.2023",
+    "En Düsük": 23.3,
+    "En Yüksek": 47.4,
+    "Ortalama": 34
+  },
+  {
+    "Tarih": "12.10.2023",
+    "En Düsük": 23.4,
+    "En Yüksek": 47.6,
+    "Ortalama": 34.1
+  },
+  {
+    "Tarih": "13.10.2023",
+    "En Düsük": 23.5,
+    "En Yüksek": 47.8,
+    "Ortalama": 34.2
+  },
+  {
+    "Tarih": "14.10.2023",
+    "En Düsük": 23.6,
+    "En Yüksek": 47.9,
+    "Ortalama": 34.3
+  },
+  {
+    "Tarih": "15.10.2023",
+    "En Düsük": 23.7,
+    "En Yüksek": 48,
+    "Ortalama": 34.4
+  },
+  {
+    "Tarih": "16.10.2023",
+    "En Düsük": 23.8,
+    "En Yüksek": 48.2,
+    "Ortalama": 34.6
+  },
+  {
+    "Tarih": "17.10.2023",
+    "En Düsük": 23.9,
+    "En Yüksek": 48.4,
+    "Ortalama": 34.7
+  },
+  {
+    "Tarih": "18.10.2023",
+    "En Düsük": 24,
+    "En Yüksek": 48.5,
+    "Ortalama": 34.8
+  },
+  {
+    "Tarih": "19.10.2023",
+    "En Düsük": 24.1,
+    "En Yüksek": 48.6,
+    "Ortalama": 34.9
+  },
+  {
+    "Tarih": "20.10.2023",
+    "En Düsük": 24.2,
+    "En Yüksek": 48.8,
+    "Ortalama": 35
+  },
+  {
+    "Tarih": "21.10.2023",
+    "En Düsük": 24.3,
+    "En Yüksek": 48.9,
+    "Ortalama": 35.2
+  },
+  {
+    "Tarih": "22.10.2023",
+    "En Düsük": 24.4,
+    "En Yüksek": 49.1,
+    "Ortalama": 35.3
+  },
+  {
+    "Tarih": "23.10.2023",
+    "En Düsük": 24.5,
+    "En Yüksek": 49.2,
+    "Ortalama": 35.4
+  },
+  {
+    "Tarih": "24.10.2023",
+    "En Düsük": 24.6,
+    "En Yüksek": 49.4,
+    "Ortalama": 35.5
+  },
+  {
+    "Tarih": "25.10.2023",
+    "En Düsük": 24.7,
+    "En Yüksek": 49.5,
+    "Ortalama": 35.6
+  },
+  {
+    "Tarih": "26.10.2023",
+    "En Düsük": 24.8,
+    "En Yüksek": 49.7,
+    "Ortalama": 35.8
+  },
+  {
+    "Tarih": "27.10.2023",
+    "En Düsük": 24.9,
+    "En Yüksek": 49.9,
+    "Ortalama": 35.9
+  },
+  {
+    "Tarih": "28.10.2023",
+    "En Düsük": 25,
+    "En Yüksek": 50,
+    "Ortalama": 36
+  },
+  {
+    "Tarih": "29.10.2023",
+    "En Düsük": 25.1,
+    "En Yüksek": 50.1,
+    "Ortalama": 36.1
+  },
+  {
+    "Tarih": "30.10.2023",
+    "En Düsük": 25.2,
+    "En Yüksek": 50.3,
+    "Ortalama": 36.2
+  },
+  {
+    "Tarih": "31.10.2023",
+    "En Düsük": 25.3,
+    "En Yüksek": 50.4,
+    "Ortalama": 36.4
+  },
+  {
+    "Tarih": "1.11.2023",
+    "En Düsük": 25.4,
+    "En Yüksek": 50.6,
+    "Ortalama": 36.5
+  },
+  {
+    "Tarih": "2.11.2023",
+    "En Düsük": 25.5,
+    "En Yüksek": 50.8,
+    "Ortalama": 36.6
+  },
+  {
+    "Tarih": "3.11.2023",
+    "En Düsük": 25.5,
+    "En Yüksek": 50.8,
+    "Ortalama": 36.6
+  },
+  {
+    "Tarih": "4.11.2023",
+    "En Düsük": 25.6,
+    "En Yüksek": 51.0,
+    "Ortalama": 36.7
+  },
+  {
+    "Tarih": "5.11.2023",
+    "En Düsük": 25.7,
+    "En Yüksek": 51.2,
+    "Ortalama": 36.8
+  },
+  {
+    "Tarih": "6.11.2023",
+    "En Düsük": 25.8,
+    "En Yüksek": 51.4,
+    "Ortalama": 37.0
+  },
+  {
+    "Tarih": "7.11.2023",
+    "En Düsük": 25.9,
+    "En Yüksek": 51.6,
+    "Ortalama": 37.1
+  },
+  {
+    "Tarih": "8.11.2023",
+    "En Düsük": 26.0,
+    "En Yüksek": 51.8,
+    "Ortalama": 37.2
+  },
+  {
+    "Tarih": "9.11.2023",
+    "En Düsük": 26.1,
+    "En Yüksek": 52.0,
+    "Ortalama": 37.3
+  },
+  {
+    "Tarih": "10.11.2023",
+    "En Düsük": 26.2,
+    "En Yüksek": 52.2,
+    "Ortalama": 37.4
+  },
+  {
+    "Tarih": "11.11.2023",
+    "En Düsük": 26.3,
+    "En Yüksek": 52.4,
+    "Ortalama": 37.5
+  },
+  {
+    "Tarih": "12.11.2023",
+    "En Düsük": 26.4,
+    "En Yüksek": 52.6,
+    "Ortalama": 37.6
+  },
+  {
+    "Tarih": "13.11.2023",
+    "En Düsük": 26.5,
+    "En Yüksek": 52.8,
+    "Ortalama": 37.7
+  },
+  {
+    "Tarih": "14.11.2023",
+    "En Düsük": 26.6,
+    "En Yüksek": 53.0,
+    "Ortalama": 37.8
+  },
+  {
+    "Tarih": "15.11.2023",
+    "En Düsük": 26.7,
+    "En Yüksek": 53.2,
+    "Ortalama": 37.9
+  },
+  {
+    "Tarih": "16.11.2023",
+    "En Düsük": 26.8,
+    "En Yüksek": 53.4,
+    "Ortalama": 38.0
+  },
+  {
+    "Tarih": "17.11.2023",
+    "En Düsük": 26.9,
+    "En Yüksek": 53.6,
+    "Ortalama": 38.1
+  },
+  {
+    "Tarih": "18.11.2023",
+    "En Düsük": 27.0,
+    "En Yüksek": 53.8,
+    "Ortalama": 38.2
+  },
+  {
+    "Tarih": "19.11.2023",
+    "En Düsük": 27.1,
+    "En Yüksek": 54.0,
+    "Ortalama": 38.3
+  },
+  {
+    "Tarih": "20.11.2023",
+    "En Düsük": 27.2,
+    "En Yüksek": 54.2,
+    "Ortalama": 38.4
+  },
+  {
+    "Tarih": "21.11.2023",
+    "En Düsük": 27.3,
+    "En Yüksek": 54.4,
+    "Ortalama": 38.5
+  },
+  {
+    "Tarih": "22.11.2023",
+    "En Düsük": 27.4,
+    "En Yüksek": 54.6,
+    "Ortalama": 38.6
+  },
+  {
+    "Tarih": "23.11.2023",
+    "En Düsük": 27.5,
+    "En Yüksek": 54.8,
+    "Ortalama": 38.7
+  },
+  {
+    "Tarih": "24.11.2023",
+    "En Düsük": 27.6,
+    "En Yüksek": 55.0,
+    "Ortalama": 38.8
+  },
+  {
+    "Tarih": "25.11.2023",
+    "En Düsük": 27.7,
+    "En Yüksek": 55.2,
+    "Ortalama": 38.9
+  },
+  {
+    "Tarih": "26.11.2023",
+    "En Düsük": 27.8,
+    "En Yüksek": 55.4,
+    "Ortalama": 39.0
+  },
+  {
+    "Tarih": "27.11.2023",
+    "En Düsük": 27.9,
+    "En Yüksek": 55.6,
+    "Ortalama": 39.1
+  },
+  {
+    "Tarih": "28.11.2023",
+    "En Düsük": 28.0,
+    "En Yüksek": 55.8,
+    "Ortalama": 39.2
+  },
+  {
+    "Tarih": "29.11.2023",
+    "En Düsük": 28.1,
+    "En Yüksek": 56.0,
+    "Ortalama": 39.3
+  },
+  {
+    "Tarih": "30.11.2023",
+    "En Düsük": 28.2,
+    "En Yüksek": 56.2,
+    "Ortalama": 39.4
+  },
+  {
+    "Tarih": "1.12.2023",
+    "En Düsük": 7.2,
+    "En Yüksek": 12.5,
+    "Ortalama": 9.8
+  },
+  {
+    "Tarih": "2.12.2023",
+    "En Düsük": 6.9,
+    "En Yüksek": 12.2,
+    "Ortalama": 9.5
+  },
+  {
+    "Tarih": "3.12.2023",
+    "En Düsük": 6.5,
+    "En Yüksek": 11.8,
+    "Ortalama": 9.1
+  },
+  {
+    "Tarih": "4.12.2023",
+    "En Düsük": 6.0,
+    "En Yüksek": 11.0,
+    "Ortalama": 8.5
+  },
+  {
+    "Tarih": "5.12.2023",
+    "En Düsük": 5.8,
+    "En Yüksek": 10.5,
+    "Ortalama": 8.2
+  },
+  {
+    "Tarih": "6.12.2023",
+    "En Düsük": 5.5,
+    "En Yüksek": 10.0,
+    "Ortalama": 7.8
+  },
+  {
+    "Tarih": "7.12.2023",
+    "En Düsük": 6.2,
+    "En Yüksek": 11.2,
+    "Ortalama": 8.7
+  },
+  {
+    "Tarih": "8.12.2023",
+    "En Düsük": 6.8,
+    "En Yüksek": 11.8,
+    "Ortalama": 9.3
+  },
+  {
+    "Tarih": "9.12.2023",
+    "En Düsük": 7.0,
+    "En Yüksek": 12.0,
+    "Ortalama": 9.5
+  },
+  {
+    "Tarih": "10.12.2023",
+    "En Düsük": 7.5,
+    "En Yüksek": 12.8,
+    "Ortalama": 10.1
+  },
+  {
+    "Tarih": "11.12.2023",
+    "En Düsük": 7.0,
+    "En Yüksek": 12.0,
+    "Ortalama": 9.5
+  },
+  {
+    "Tarih": "12.12.2023",
+    "En Düsük": 6.5,
+    "En Yüksek": 11.0,
+    "Ortalama": 8.8
+  },
+  {
+    "Tarih": "13.12.2023",
+    "En Düsük": 6.0,
+    "En Yüksek": 10.5,
+    "Ortalama": 8.2
+  },
+  {
+    "Tarih": "14.12.2023",
+    "En Düsük": 5.8,
+    "En Yüksek": 10.2,
+    "Ortalama": 8.0
+  },
+  {
+    "Tarih": "15.12.2023",
+    "En Düsük": 5.5,
+    "En Yüksek": 9.8,
+    "Ortalama": 7.6
+  },
+  {
+    "Tarih": "16.12.2023",
+    "En Düsük": 6.0,
+    "En Yüksek": 10.5,
+    "Ortalama": 8.2
+  },
+  {
+    "Tarih": "17.12.2023",
+    "En Düsük": 6.5,
+    "En Yüksek": 11.0,
+    "Ortalama": 8.8
+  },
+  {
+    "Tarih": "18.12.2023",
+    "En Düsük": 7.0,
+    "En Yüksek": 11.8,
+    "Ortalama": 9.4
+  },
+  {
+    "Tarih": "19.12.2023",
+    "En Düsük": 7.5,
+    "En Yüksek": 12.2,
+    "Ortalama": 9.8
+  },
+  {
+    "Tarih": "20.12.2023",
+    "En Düsük": 7.0,
+    "En Yüksek": 12.0,
+    "Ortalama": 9.5
+  },
+  {
+    "Tarih": "21.12.2023",
+    "En Düsük": 6.5,
+    "En Yüksek": 11.5,
+    "Ortalama": 9.0
+  },
+  {
+    "Tarih": "22.12.2023",
+    "En Düsük": 6.0,
+    "En Yüksek": 11.0,
+    "Ortalama": 8.5
+  },
+  {
+    "Tarih": "23.12.2023",
+    "En Düsük": 5.8,
+    "En Yüksek": 10.5,
+    "Ortalama": 8.2
+  },
+  {
+    "Tarih": "24.12.2023",
+    "En Düsük": 5.5,
+    "En Yüksek": 10.0,
+    "Ortalama": 7.8
+  },
+  {
+    "Tarih": "25.12.2023",
+    "En Düsük": 6.2,
+    "En Yüksek": 11.2,
+    "Ortalama": 8.7
+  },
+  {
+    "Tarih": "26.12.2023",
+    "En Düsük": 6.8,
+    "En Yüksek": 11.8,
+    "Ortalama": 9.3
+  },
+  {
+    "Tarih": "27.12.2023",
+    "En Düsük": 7.0,
+    "En Yüksek": 12.0,
+    "Ortalama": 9.5
+  },
+  {
+    "Tarih": "28.12.2023",
+    "En Düsük": 7.5,
+    "En Yüksek": 12.5,
+    "Ortalama": 10.0
+  },
+  {
+    "Tarih": "29.12.2023",
+    "En Düsük": 7.8,
+    "En Yüksek": 12.8,
+    "Ortalama": 10.3
+  },
+  {
+    "Tarih": "30.12.2023",
+    "En Düsük": 7.5,
+    "En Yüksek": 12.5,
+    "Ortalama": 10.0
+  },
+  {
+    "Tarih": "31.12.2023",
+    "En Düsük": 7.2,
+    "En Yüksek": 12.2,
+    "Ortalama": 9.7
+  }
+]
