@@ -16,8 +16,8 @@ class WeatherDataTile extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text(index1,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
-            Text(index2,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
+            Text(index1,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),),
+            Text(index2,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),),
           ],
         ),
         Row(

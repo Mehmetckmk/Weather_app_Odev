@@ -1,8 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/services/weather_services.dart';
-import 'package:weather_app/widget/weather_data.dart';
 
 class WeatherApp extends StatefulWidget {
   const WeatherApp({super.key});
@@ -13,145 +12,177 @@ class WeatherApp extends StatefulWidget {
 
 class _WeatherAppState extends State<WeatherApp> {
   final TextEditingController _controller = TextEditingController();
+  String city = "Bandırma";
   String _bgImg = 'assets/images/clear.jpg';
   String _iconImg = 'assets/icons/Clear.png';
   String _cityName = '';
-  String _temperature = '';
-  String _sunrise = '';
-  String _sunset = '';
-  String _main = '';
-  String _presure = '';
-  String _humidity = '';
-  String _visibility = '';
-  String _windSpeed = '';
-
-  getData(String cityName) async {
-    final weatherService = WeatherServices();
-    var weatherData;
-    if (cityName == '')
-      weatherData = await weatherService.fetchWeather();
-    else
-      weatherData = await weatherService.getWeather(cityName);
-
-    debugPrint(weatherData.toString());
-    setState(() {
-      _cityName = weatherData['name'];
-      _temperature = weatherData['main']['temp'].toStringAsFixed(1);
-      _main = weatherData['weather'][0]['main'];
-      _sunrise = DateFormat('hh:mm a').format(
-          DateTime.fromMillisecondsSinceEpoch(
-              weatherData['sys']['sunrise'] * 1000));
-      _sunset = DateFormat('hh:mm a').format(
-          DateTime.fromMillisecondsSinceEpoch(
-              weatherData['sys']['sunset'] * 1000));
-      _presure = weatherData['main']['pressure'].toString();
-      _humidity = weatherData['main']['humidity'].toString();
-      _visibility = weatherData['visibility'].toString();
-      _windSpeed = weatherData['wind']['speed'].toString();
-      if (_main == 'Clear') {
-        _bgImg = 'assets/images/clear.jpg';
-        _iconImg = 'assets/icons/Clear.png';
-      } else if (_main == 'Clouds') {
-        _bgImg = 'assets/images/clouds.jpg';
-        _iconImg = 'assets/icons/Clouds.png';
-      } else if (_main == 'Rain') {
-        _bgImg = 'assets/images/rain.jpg';
-        _iconImg = 'assets/icons/Rain.png';
-      } else if (_main == 'Fog') {
-        _bgImg = 'assets/images/fog.jpg';
-        _iconImg = 'assets/icons/Haze.png';
-      } else if (_main == 'Thunderstorm') {
-        _bgImg = 'assets/images/thunderstorm.jpg';
-        _iconImg = 'assets/icons/Thunderstorm.png';
-      } else {
-        _bgImg = 'assets/images/haze.jpg';
-        _iconImg = 'assets/icons/Haze.png';
-      }
-    });
-  }
-
-  Future<bool> _checkLocationPermission() async {
-    LocationPermission permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        return false;
-      }
-      getData('');
-    }
-    getData('');
-    return true;
-  }
 
   @override
   Widget build(BuildContext context) {
-    var ekranbilgisi=MediaQuery.of(context);
-    var genislik=ekranbilgisi.size.width;
+    var ekranBilgisi = MediaQuery.of(context);
+    var genislik = ekranBilgisi.size.width;
+
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(_bgImg,
+          // Dinamik arka plan resmi
+          Image.asset(
+            _bgImg,
             fit: BoxFit.cover,
-            width:double.infinity,
+            width: double.infinity,
             height: double.infinity,
           ),
-          Padding(padding: const EdgeInsets.all(15),
-            child:SingleChildScrollView(
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20,),
+                  const SizedBox(height: 20),
+                  // Şehir adı girişi için TextField
                   TextField(
                     controller: _controller,
-                    onChanged: (value){
-                      getData(value);
+                    onChanged: (value) {
+                      setState(() {
+                        city = value;
+                      });
                     },
                     decoration: const InputDecoration(
-                        suffixIcon: Icon(Icons.search),
-                        filled: true,
-                        fillColor: Colors.black26,
+                      suffixIcon: Icon(Icons.search),
+                      filled: true,
+                      fillColor: Colors.black26,
                       hintText: "Konumu Girin",
                       border: OutlineInputBorder(
-                        borderRadius:BorderRadius.all(Radius.circular(16)),
+                        borderRadius: BorderRadius.all(Radius.circular(16)),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 15,),
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(Icons.location_on),
-                      Text(_cityName,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),
-                    ],
-                  ),
-                  const SizedBox(height: 40,),
-                  Text("$_temperature C",style: const TextStyle(color: Colors.black38,fontSize: 90,fontWeight: FontWeight.bold),),
-                  Row(
-                    children: [
-                      Text(_main,style: const TextStyle(fontSize: 22,fontWeight: FontWeight.w500),),
-                      SizedBox(width: genislik/1.349,
-                          child: Image.asset(_iconImg)),
-                    ],
-                  ),
-                  const SizedBox(height: 25,),
-                  Card(
-                    elevation: 5,
-                    color: Colors.transparent,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Container(
-                        child: Column(
-                          children: [
-                            WeatherDataTile(index1: "Gün Doğumu", index2: "Gün Batımı", value1: _sunrise, value2: _sunset),
-                            const SizedBox(height: 15,),
-                            WeatherDataTile(index1: "Nem", index2: "Görüş Mesafesi", value1:_humidity, value2: _visibility),
-                            const SizedBox(height: 15,),
-                            WeatherDataTile(index1: "Yağış", index2: "Rüzgar Hızı", value1: _presure, value2: _windSpeed),
-                            const SizedBox(height: 15,),
-                          ]
-                        ),
+                      Text(
+                        city,
+                        style: const TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500),
                       ),
-                    ),
+                    ],
+                  ),
+                  const SizedBox(height: 40),
+                  // Use FutureBuilder to fetch the weather data asynchronously
+                  FutureBuilder<Map<String, dynamic>>(
+                    future: fetchWeatherData(city), // Pass the city name to the fetch method
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return Center(child: CircularProgressIndicator());
+                      } else if (snapshot.hasError) {
+                        return Center(child: Text('Error: ${snapshot.error}'));
+                      } else if (!snapshot.hasData) {
+                        return Center(child: Text('No data found'));
+                      } else {
+                        var data = snapshot.data!; // Access the weather data here
+
+                        // Update the background image and icon based on weather data
+                        if (data["calculatedTemperature"] > 20 && data["pressure"] < 1000) {
+                          _bgImg = 'assets/images/clear.jpg';
+                          _iconImg = 'assets/icons/Clear.png';
+                        } else if (data["calculatedTemperature"] < 15 && data["pressure"] > 1000) {
+                          _bgImg = 'assets/images/clouds.jpg';
+                          _iconImg = 'assets/icons/Clouds.png';
+                        } else if (data["calculatedTemperature"] < 10 && data["pressure"] > 1000) {
+                          _bgImg = 'assets/images/rain.jpg';
+                          _iconImg = 'assets/icons/Rain.png';
+                        } else if (data["calculatedTemperature"] > 10 && data["pressure"] < 20) {
+                          _bgImg = 'assets/images/fog.jpg';
+                          _iconImg = 'assets/icons/Haze.png';
+                        } else {
+                          _bgImg = 'assets/images/haze.jpg';
+                          _iconImg = 'assets/icons/Haze.png';
+                        }
+
+                        return Column(
+                          children: [
+                            Text(
+                              "${data["calculatedTemperature"].toStringAsFixed(2)} °C",
+                              style: const TextStyle(
+                                  color: Colors.black38,
+                                  fontSize: 90,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: genislik / 1.349,
+                                  child: Image.asset(_iconImg),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 25),
+                            Card(
+                              elevation: 5,
+                              color: Colors.transparent,
+                              child: Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Column(
+                                  children: [
+                                    // Nem bilgisi
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Text(
+                                          "Nem",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 20),
+                                        ),
+                                        Text(
+                                          data["humidity"].toString(),
+                                          style: const TextStyle(color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 15),
+                                    // Yağış ve Rüzgar Hızı bilgileri
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            const Text("Yağış",
+                                                style: TextStyle(
+                                                    color: Colors.white, fontSize: 18)),
+                                            Text(
+                                              data["pressure"].toString(),
+                                              style: const TextStyle(
+                                                  color: Colors.white, fontSize: 16),
+                                            ),
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            const Text("Rüzgar Hızı",
+                                                style: TextStyle(
+                                                    color: Colors.white, fontSize: 18)),
+                                            Text(
+                                              data["windSpeed"].toString(),
+                                              style: const TextStyle(
+                                                  color: Colors.white, fontSize: 16),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 15),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      }
+                    },
                   ),
                 ],
               ),
@@ -160,5 +191,142 @@ class _WeatherAppState extends State<WeatherApp> {
         ],
       ),
     );
+  }
+
+  Future<Map<String, dynamic>> fetchWeatherData(String cityName) async {
+    try {
+      final weatherData = await fetchWeatherForToday(cityName);
+      final lastYearTemp = await fetchWeatherForLastYear(cityName);
+
+      final double calculatedTemperature = calculateTemperature(
+        currentHumidity: weatherData['humidity']!,
+        currentWindSpeed: weatherData['windSpeed']!,
+        currentPressure: weatherData['pressure']!,
+        lastYearTemp: lastYearTemp["Ortalama"]!,
+      );
+
+      return {
+        'calculatedTemperature': calculatedTemperature,
+        'humidity': weatherData['humidity'],
+        'windSpeed': weatherData['windSpeed'],
+        'pressure': weatherData['pressure'],
+      };
+    } catch (e) {
+      throw Exception('Veri alınırken bir hata oluştu: $e');
+    }
+  }
+
+  double calculateTemperature({
+    required double? currentHumidity,
+    required double? currentWindSpeed,
+    required double? currentPressure,
+    required double lastYearTemp,
+  }) {
+    if (currentHumidity == null || currentWindSpeed == null || currentPressure == null) {
+      throw Exception('Girdi değerlerinden biri null!');
+    }
+
+    // Faktör katsayıları
+    const double humidityFactor = 0.04;
+    const double windSpeedFactor = 0.2;
+    const double pressureFactor = 0.02;
+
+    // Sıcaklık tahmini hesapla
+    double temperatureEstimate = (currentHumidity * humidityFactor) +
+        (currentWindSpeed * windSpeedFactor) +
+        (currentPressure * pressureFactor);
+
+    // Geçmiş veri ile ağırlıklı ortalama hesapla
+    double weightedAverageTemperature =
+        (temperatureEstimate + lastYearTemp) / 3;
+
+    return weightedAverageTemperature;
+  }
+
+  Future<Map<String, double>> fetchWeatherForToday(String cityName) async {
+    try {
+      // Bugünün tarihini al ve formatla (d.M.yyyy)
+      final today = DateFormat('d.M.yyyy').format(DateTime.now());
+
+      // JSON dosyasını oku
+      final contents = await rootBundle.loadString('assets/data/now_city_three.json');
+
+      // JSON verisini parse et
+      final data = jsonDecode(contents);
+
+      // Şehir ve tarih verilerini kontrol et
+      if (data[cityName] == null) {
+        throw Exception('$cityName verisi JSON dosyasında bulunamadı.');
+      }
+      final cityData = data[cityName];
+      if (cityData[today] == null) {
+        throw Exception('Bugün ($today) tarihi için $cityName verisi bulunamadı.');
+      }
+
+      // Hava durumu verilerini al
+      final weatherData = cityData[today];
+
+      // Dinamik olarak değerleri al ve double formatına çevir
+      final double humidity = (weatherData['humidity'] as num).toDouble();
+      final double windSpeed = (weatherData['windspeed'] as num).toDouble();
+      final double pressure = (weatherData['pressure'] as num).toDouble();
+
+      return {
+        'humidity': humidity,
+        'windSpeed': windSpeed,
+        'pressure': pressure,
+      };
+    } catch (e) {
+      // Hata durumunda bir exception fırlat
+      throw Exception('JSON verileri işlenirken bir hata oluştu: $e');
+    }
+  }
+
+  Future<Map<String, double>> fetchWeatherForLastYear(String cityName) async {
+    try {
+      // Bugünün tarihini al ve formatla (d.M.yyyy)
+      final DateTime today = DateTime.now();
+      final DateTime lastYearDate = DateTime(today.year - 1, today.month, today.day);
+      final String targetDate = DateFormat('d.M.yyyy').format(lastYearDate);
+
+      // JSON dosyasını oku
+      final contents = await rootBundle.loadString('assets/data/three_city_last_year.json');
+
+      // JSON verisini parse et
+      final data = jsonDecode(contents);
+
+      // Şehir ve tarih verilerini kontrol et
+      if (data[cityName] == null) {
+        throw Exception('$cityName verisiii JSON dosyasında bulunamadı.');
+      }
+
+      // Şehre ait veriler
+      final cityData = data[cityName];
+
+      // Belirli bir tarih için veriyi bul
+      Map<String, dynamic>? weatherData;
+
+      // Listede döngü ile ilgili tarihi arayın
+      for (var entry in cityData) {
+        if (entry.containsKey(targetDate)) {
+          weatherData = entry[targetDate];
+          break;
+        }
+      }
+
+      if (weatherData == null) {
+        throw Exception('Geçen yılın ($targetDate) tarihi için $cityName verisi bulunamadı.');
+      }
+
+      // "Ortalama" verisini alın ve double olarak dönüştürün
+      final double ortalama = (weatherData['Ortalama'] as num).toDouble();
+
+      return {
+        'Ortalama': ortalama,
+      };
+    } catch (e) {
+      // Hata durumunda bir exception fırlat
+      throw Exception('JSON verileri işlenirken bir hata oluştu: $e');
+    }
   }
 }

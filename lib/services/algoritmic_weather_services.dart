@@ -1,30 +1,34 @@
+// Bu uygulama, bir şehir için hava durumu verilerini görüntülemek ve tahmini sıcaklık değerlerini hesaplamak amacıyla tasarlanmıştır.
+// JSON dosyaları ve harici API'ler kullanılarak bugünkü hava durumu ve geçen yılın aynı gününe ait veriler alınır.
+// Bu veriler, bir sıcaklık tahmini yapmak için çeşitli faktörler göz önünde bulundurularak hesaplanır.
 import 'dart:convert';
 import 'package:flutter/services.dart'; // JSON dosyasını okumak için gerekli
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:intl/intl.dart';
-import 'package:weather_app/WeatherUI.dart';
+import 'package:intl/intl.dart'; // Tarih formatlama işlemleri için gerekli
+import 'package:weather_app/anasayfa.dart'; // Hava durumu arayüzü için gerekli.
 
-const String apiKey = 'd73a42c58731ba78504b39577b6545f0';
-const String city = 'Bandırma';
-const String currentWeatherUrl =
-    'https://api.openweathermap.org/data/2.5/weather';
-
+// WeatherData sınıfı, hava durumu verilerini alıp işleyecek olan StatelessWidget.
 class WeatherData extends StatelessWidget {
   const WeatherData({super.key});
 
+  // Hava durumu verilerini JSON dosyasından ve geçen yılki verilerden alır, tahmini sıcaklık hesaplar.
   Future<Map<String, dynamic>> fetchWeatherData() async {
     try {
-      final weatherData = await fetchCurrentWeather();
-      final lastYearTemp = await fetchLastYearTemperature();
+      // Şu anki hava durumu verilerini al
+      final weatherData = await fetchWeatherForToday("Bandırma");
 
+      // Geçen yılın aynı gününe ait sıcaklık verilerini al
+      final lastYearTemp = await fetchWeatherForLastYear("Bandırma");
+
+      // Tahmini sıcaklığı hesapla
       final double calculatedTemperature = calculateTemperature(
         currentHumidity: weatherData['humidity']!,
         currentWindSpeed: weatherData['windSpeed']!,
         currentPressure: weatherData['pressure']!,
-        lastYearTemp: lastYearTemp,
+        lastYearTemp: lastYearTemp["Ortalama"]!,
       );
 
+      // Hesaplanan ve alınan verileri bir map olarak döndür
       return {
         'calculatedTemperature': calculatedTemperature,
         'humidity': weatherData['humidity'],
@@ -32,12 +36,14 @@ class WeatherData extends StatelessWidget {
         'pressure': weatherData['pressure'],
       };
     } catch (e) {
+      // Hata durumunda bir exception fırlat
       throw Exception('Veri alınırken bir hata oluştu: $e');
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    // Uygulama ekranının düzeni
     return Scaffold(
       appBar: AppBar(
         title: const Text('Hava Durumu Verileri'),
@@ -46,15 +52,16 @@ class WeatherData extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () async {
             try {
+              // Hava durumu verilerini al ve WeatherUI ekranına yönlendir
               final weatherData = await fetchWeatherData();
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => WeatherUI(weatherData: weatherData),
+                  builder: (context) => WeatherApp(),
                 ),
               );
             } catch (e) {
-              // Hata durumu
+              // Hata durumunda bir uyarı göster
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
@@ -76,82 +83,145 @@ class WeatherData extends StatelessWidget {
     );
   }
 
-  Future<Map<String, double>> fetchCurrentWeather() async {
-    final response = await http.get(
-        Uri.parse('$currentWeatherUrl?q=$city&appid=$apiKey&units=metric'));
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
+  // Bugünkü hava durumu verilerini JSON dosyasından alır.
+  Future<Map<String, double>> fetchWeatherForToday(String cityName) async {
+    try {
+      // Bugünün tarihini al ve formatla (d.M.yyyy)
+      final today = DateFormat('d.M.yyyy').format(DateTime.now());
 
-      final double humidity = (data['main']['humidity'] is int)
-          ? (data['main']['humidity'] as int).toDouble()
-          : (data['main']['humidity'] as double);
+      // JSON dosyasını oku
+      final contents = await rootBundle.loadString('assets/data/now_city_three.json');
 
-      final double windSpeed = (data['wind']['speed'] is int)
-          ? (data['wind']['speed'] as int).toDouble()
-          : (data['wind']['speed'] as double);
+      // JSON verisini parse et
+      final data = jsonDecode(contents);
 
-      final double pressure = (data['main']['pressure'] is int)
-          ? (data['main']['pressure'] as int).toDouble()
-          : (data['main']['pressure'] as double);
+      // Şehir ve tarih verilerini kontrol et
+      if (data[cityName] == null) {
+        throw Exception('$cityName verisi JSON dosyasında bulunamadı.');
+      }
+      final cityData = data[cityName];
+      if (cityData[today] == null) {
+        throw Exception('Bugün ($today) tarihi için $cityName verisi bulunamadı.');
+      }
+
+      // Hava durumu verilerini al
+      final weatherData = cityData[today];
+
+      // Dinamik olarak değerleri al ve double formatına çevir
+      final double humidity = (weatherData['humidity'] as num).toDouble();
+      final double windSpeed = (weatherData['windspeed'] as num).toDouble();
+      final double pressure = (weatherData['pressure'] as num).toDouble();
 
       return {
         'humidity': humidity,
         'windSpeed': windSpeed,
         'pressure': pressure,
       };
-    } else {
-      throw Exception('Hava durumu verileri alınamadı!');
+    } catch (e) {
+      // Hata durumunda bir exception fırlat
+      throw Exception('JSON verileri işlenirken bir hata oluştu: $e');
     }
   }
-
-  Future<double> fetchLastYearTemperature() async {
+  // Geçen Yılın hava durumu verilerini JSON dosyasından alır.
+  Future<Map<String, double>> fetchWeatherForLastYear(String cityName) async {
     try {
-      final String jsonString =
-          await rootBundle.loadString('assets/data/last_year.json');
-      final List<dynamic> jsonData = jsonDecode(jsonString);
-
+      // Bugünün tarihini al ve formatla (d.M.yyyy)
       final DateTime today = DateTime.now();
-      // Bugünün tarihini tam olarak d.M.yyyy formatında alın
-      final DateTime lastYearDate =
-          DateTime(today.year - 1, today.month, today.day + 2);
-      final String targetDate = DateFormat('d.M.yyyy')
-          .format(lastYearDate); // Tarihi "d.M.yyyy" formatında alıyoruz
-      print("tarih" + targetDate);
-      for (var data in jsonData) {
-        if (data['Tarih'] == targetDate) {
-          final String averageTemperature = data['Ortalama'].toString();
-          return double.parse(averageTemperature.replaceAll(',', '.'));
+      final DateTime lastYearDate = DateTime(today.year - 1, today.month, today.day);
+      final String targetDate = DateFormat('d.M.yyyy').format(lastYearDate);
+
+      // JSON dosyasını oku
+      final contents = await rootBundle.loadString('assets/data/three_city_last_year.json');
+
+      // JSON verisini parse et
+      final data = jsonDecode(contents);
+
+      // Şehir ve tarih verilerini kontrol et
+      if (data[cityName] == null) {
+        throw Exception('$cityName verisi JSON dosyasında bulunamadı.');
+      }
+
+      // Şehre ait veriler
+      final cityData = data[cityName];
+
+      // Belirli bir tarih için veriyi bul
+      Map<String, dynamic>? weatherData;
+
+      // Listede döngü ile ilgili tarihi arayın
+      for (var entry in cityData) {
+        if (entry.containsKey(targetDate)) {
+          weatherData = entry[targetDate];
+          break;
         }
       }
 
-      // Eğer veriyi bulamazsanız
-      throw Exception('Geçen yılın hava durumu verisi alınamadı!');
+      if (weatherData == null) {
+        throw Exception('Geçen yılın ($targetDate) tarihi için $cityName verisi bulunamadı.');
+      }
+
+      // "Ortalama" verisini alın ve double olarak dönüştürün
+      final double ortalama = (weatherData['Ortalama'] as num).toDouble();
+
+      return {
+        'Ortalama': ortalama,
+      };
     } catch (e) {
-      throw Exception('Geçen yılın verileri alınırken hata oluştu: $e');
+      // Hata durumunda bir exception fırlat
+      throw Exception('JSON verileri işlenirken bir hata oluştu: $e');
     }
   }
 
-  /// Bugünün sıcaklık tahminini hesaplar.
+
+  // // Geçen yılın aynı gününe ait sıcaklık verilerini JSON dosyasından alır.
+  // Future<double> fetchLastYearTemperature() async {
+  //   try {
+  //     // JSON dosyasını oku
+  //     final String jsonString = await rootBundle.loadString('assets/data/last_year.json');
+  //     final List<dynamic> jsonData = jsonDecode(jsonString);
+  //
+  //     // Geçen yılın tarihini hesapla
+  //     final DateTime today = DateTime.now();
+  //     final DateTime lastYearDate = DateTime(today.year - 1, today.month, today.day);
+  //     final String targetDate = DateFormat('d.M.yyyy').format(lastYearDate);
+  //
+  //     // JSON verilerinde ilgili tarihi bul ve sıcaklığı al
+  //     for (var data in jsonData) {
+  //       if (data['Tarih'] == targetDate) {
+  //         final String averageTemperature = data['Ortalama'].toString();
+  //         return double.parse(averageTemperature.replaceAll(',', '.'));
+  //       }
+  //     }
+  //
+  //     // Veri bulunamazsa exception fırlat
+  //     throw Exception('Geçen yılın hava durumu verisi alınamadı!');
+  //   } catch (e) {
+  //     // Hata durumunda bir exception fırlat
+  //     throw Exception('Geçen yılın verileri alınırken hata oluştu: $e');
+  //   }
+  // }
+
+  // Bugünkü sıcaklık tahminini hesaplar.
   double calculateTemperature({
-    required double currentHumidity,
-    required double currentWindSpeed,
-    required double currentPressure,
+    required double? currentHumidity,
+    required double? currentWindSpeed,
+    required double? currentPressure,
     required double lastYearTemp,
   }) {
-    // Nem, rüzgar hızı ve basınç faktörlerini kullanarak bugünün tahmini sıcaklığını hesapla.
-    // Bu faktörler üzerinde ağırlıklı bir hesaplama yapacağız.
+    if (currentHumidity == null || currentWindSpeed == null || currentPressure == null) {
+      throw Exception('Girdi değerlerinden biri null!');
+    }
 
-    const double humidityFactor = 0.04; // Nem oranının etkisi
-    const double windSpeedFactor = 0.2; // Rüzgar hızının etkisi
-    const double pressureFactor = 0.02; // Basıncın etkisi
+    // Faktör katsayıları
+    const double humidityFactor = 0.04;
+    const double windSpeedFactor = 0.2;
+    const double pressureFactor = 0.02;
 
-    // Nem oranı ve rüzgar hızı ile bir tahmin oluşturuyoruz.
+    // Sıcaklık tahmini hesapla
     double temperatureEstimate = (currentHumidity * humidityFactor) +
         (currentWindSpeed * windSpeedFactor) +
         (currentPressure * pressureFactor);
 
-    // Geçen yılın verisiyle bu tahmini sıcaklık birleştiriyoruz.
-    // Bu hesaplama için ağırlıklı bir ortalama kullanalım.
+    // Geçmiş veri ile ağırlıklı ortalama hesapla
     double weightedAverageTemperature =
         (temperatureEstimate + lastYearTemp) / 3;
 

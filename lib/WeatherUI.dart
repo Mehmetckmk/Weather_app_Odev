@@ -17,7 +17,7 @@ class WeatherUI extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Tahmini Sıcaklık: ${weatherData['calculatedTemperature']}°C',
+              'Tahmini Sıcaklık: ${weatherData['calculatedTemperature']!.toStringAsFixed(2)}°C',
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 10),
