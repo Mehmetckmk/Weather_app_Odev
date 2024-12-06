@@ -12,15 +12,57 @@ class WeatherApp extends StatefulWidget {
 
 class _WeatherAppState extends State<WeatherApp> {
   final TextEditingController _controller = TextEditingController();
-  String city = "Bandırma";
-  String _bgImg = 'assets/images/clear.jpg';
-  String _iconImg = 'assets/icons/Clear.png';
-  String _cityName = '';
+  String city = "Bandırma"; // Varsayılan şehir
+  String _bgImg = 'assets/images/clear.jpg'; // Varsayılan arka plan resmi
+  String _iconImg = 'assets/icons/Clear.png'; // Varsayılan ikon resmi
+  bool isLoading = true; // Yükleme durumunu kontrol eden değişken
+
+  @override
+  void initState() {
+    super.initState();
+    _loadWeatherData(city); // İlk başta varsayılan şehir için veriyi yükle
+  }
+
+  void _loadWeatherData(String cityName) async {
+    setState(() {
+      isLoading = true; // Veriyi yüklerken loading durumunu aktif et
+    });
+
+    try {
+      // Şehir adını eşleşen ilk şehir ile güncelle
+      final matchingCity = await _findMatchingCity(cityName);
+      if (matchingCity != null) {
+        city = matchingCity;
+        await fetchWeatherData(city); // Hava durumu verisini yükle
+      } else {
+        throw Exception('Şehir bulunamadı: $cityName');
+      }
+    } catch (e) {
+      print('Hata: $e'); // Hata durumunu logla
+    } finally {
+      setState(() {
+        isLoading = false; // Veri yüklendikten sonra loading durumunu pasif et
+      });
+    }
+  }
+
+  Future<String?> _findMatchingCity(String cityName) async {
+    // JSON dosyasını oku
+    final contents = await rootBundle.loadString('assets/data/now_city_three.json');
+    final data = jsonDecode(contents);
+
+    // Girilen şehir adının ilk harflerine göre eşleşen bir şehir bul
+    return data.keys.firstWhere(
+          (key) => key.toLowerCase().startsWith(cityName.toLowerCase()),
+      orElse: () => null,
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
-    var ekranBilgisi = MediaQuery.of(context);
-    var genislik = ekranBilgisi.size.width;
+    var ekranBilgisi = MediaQuery.of(context); // Ekran boyutlarına erişim
+    var genislik = ekranBilgisi.size.width; // Ekranın genişliği
 
     return Scaffold(
       body: Stack(
@@ -43,9 +85,9 @@ class _WeatherAppState extends State<WeatherApp> {
                   TextField(
                     controller: _controller,
                     onChanged: (value) {
-                      setState(() {
-                        city = value;
-                      });
+                      if (value.length >= 3) { // Kullanıcı en az 3 karakter yazdığında aramayı başlat
+                        _loadWeatherData(value);
+                      }
                     },
                     decoration: const InputDecoration(
                       suffixIcon: Icon(Icons.search),
@@ -57,6 +99,7 @@ class _WeatherAppState extends State<WeatherApp> {
                       ),
                     ),
                   ),
+
                   const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -70,20 +113,25 @@ class _WeatherAppState extends State<WeatherApp> {
                     ],
                   ),
                   const SizedBox(height: 40),
-                  // Use FutureBuilder to fetch the weather data asynchronously
-                  FutureBuilder<Map<String, dynamic>>(
-                    future: fetchWeatherData(city), // Pass the city name to the fetch method
+                  // CircularProgressIndicator veya Hava Durumu Verisi
+                  isLoading
+                      ? Center(child: CircularProgressIndicator()) // Yükleme göstergesi
+                      : FutureBuilder<Map<String, dynamic>>(
+                    future: fetchWeatherData(city),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
+                        // Veriler yüklenirken yükleme göstergesi
                         return Center(child: CircularProgressIndicator());
                       } else if (snapshot.hasError) {
-                        return Center(child: Text('Error: ${snapshot.error}'));
+                        // Hata durumunda kullanıcı dostu mesaj
+                        return Center(child: Text('Hava durumu verisi alınamadı.'));
                       } else if (!snapshot.hasData) {
-                        return Center(child: Text('No data found'));
+                        // Eğer veri yoksa
+                        return Center(child: Text('Şehir verisi bulunamadı.'));
                       } else {
-                        var data = snapshot.data!; // Access the weather data here
+                        var data = snapshot.data!;
 
-                        // Update the background image and icon based on weather data
+                        // Hava durumu verilerine göre arka plan ve ikon güncellemesi
                         if (data["calculatedTemperature"] > 20 && data["pressure"] < 1000) {
                           _bgImg = 'assets/images/clear.jpg';
                           _iconImg = 'assets/icons/Clear.png';
@@ -104,7 +152,7 @@ class _WeatherAppState extends State<WeatherApp> {
                         return Column(
                           children: [
                             Text(
-                              "${data["calculatedTemperature"].toStringAsFixed(2)} °C",
+                              "${data["calculatedTemperature"].toStringAsFixed(2)}°C",
                               style: const TextStyle(
                                   color: Colors.black38,
                                   fontSize: 90,
@@ -126,7 +174,6 @@ class _WeatherAppState extends State<WeatherApp> {
                                 padding: const EdgeInsets.all(15.0),
                                 child: Column(
                                   children: [
-                                    // Nem bilgisi
                                     Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
@@ -144,7 +191,6 @@ class _WeatherAppState extends State<WeatherApp> {
                                       ],
                                     ),
                                     const SizedBox(height: 15),
-                                    // Yağış ve Rüzgar Hızı bilgileri
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
@@ -226,21 +272,15 @@ class _WeatherAppState extends State<WeatherApp> {
       throw Exception('Girdi değerlerinden biri null!');
     }
 
-    // Faktör katsayıları
     const double humidityFactor = 0.04;
     const double windSpeedFactor = 0.2;
     const double pressureFactor = 0.02;
 
-    // Sıcaklık tahmini hesapla
     double temperatureEstimate = (currentHumidity * humidityFactor) +
         (currentWindSpeed * windSpeedFactor) +
         (currentPressure * pressureFactor);
 
-    // Geçmiş veri ile ağırlıklı ortalama hesapla
-    double weightedAverageTemperature =
-        (temperatureEstimate + lastYearTemp) / 3;
-
-    return weightedAverageTemperature;
+    return (temperatureEstimate + lastYearTemp) / 3;
   }
 
   Future<Map<String, double>> fetchWeatherForToday(String cityName) async {
@@ -254,7 +294,7 @@ class _WeatherAppState extends State<WeatherApp> {
       // JSON verisini parse et
       final data = jsonDecode(contents);
 
-      // Şehir ve tarih verilerini kontrol et
+      // Şehir ve tarih verilerini kntrol et
       if (data[cityName] == null) {
         throw Exception('$cityName verisi JSON dosyasında bulunamadı.');
       }

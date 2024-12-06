@@ -1,5 +1,5 @@
 {
-  "Gaziantep": [
+  "gaziantep": [
     { "1.12.2023": { "En Düsük": 4, "En Yüksek": 13, "Ortalama": 8.5 } },
     { "2.12.2023": { "En Düsük": 5, "En Yüksek": 14, "Ortalama": 9.5 } },
     { "3.12.2023": { "En Düsük": 3, "En Yüksek": 15, "Ortalama": 10.5 } },
@@ -32,7 +32,7 @@
     { "30.12.2023": { "En Düsük": 3, "En Yüksek": 12, "Ortalama": 9.5 } },
     { "31.12.2023": { "En Düsük": 4, "En Yüksek": 13, "Ortalama": 10.5 } }
   ],
-  "İstanbul": [
+  "istanbul": [
     { "1.12.2023": { "En Düsük": 7, "En Yüksek": 14, "Ortalama": 10.5 } },
     { "2.12.2023": { "En Düsük": 8, "En Yüksek": 15, "Ortalama": 11.5 } },
     { "3.12.2023": { "En Düsük": 9, "En Yüksek": 16, "Ortalama": 9.5 } },
@@ -65,7 +65,7 @@
     { "30.12.2023": { "En Düsük": 8, "En Yüksek": 13, "Ortalama": 10.5 } },
     { "31.12.2023": { "En Düsük": 9, "En Yüksek": 14, "Ortalama": 11.5 } }
   ],
-  "Bandırma": [
+  "bandırma": [
     { "1.12.2023": { "En Düsük": 6, "En Yüksek": 13, "Ortalama": 9.5 } },
     { "2.12.2023": { "En Düsük": 7, "En Yüksek": 14, "Ortalama": 10.5 } },
     { "3.12.2023": { "En Düsük": 6, "En Yüksek": 15, "Ortalama": 10.5 } },
