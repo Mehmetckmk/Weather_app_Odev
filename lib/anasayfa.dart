@@ -12,7 +12,7 @@ class WeatherApp extends StatefulWidget {
 
 class _WeatherAppState extends State<WeatherApp> {
   final TextEditingController _controller = TextEditingController();
-  String city = "Bandırma"; // Varsayılan şehir
+  String city = ""; // Varsayılan şehir
   String _bgImg = 'assets/images/clear.jpg'; // Varsayılan arka plan resmi
   String _iconImg = 'assets/icons/Clear.png'; // Varsayılan ikon resmi
   bool isLoading = true; // Yükleme durumunu kontrol eden değişken
@@ -29,14 +29,7 @@ class _WeatherAppState extends State<WeatherApp> {
     });
 
     try {
-      // Şehir adını eşleşen ilk şehir ile güncelle
-      final matchingCity = await _findMatchingCity(cityName);
-      if (matchingCity != null) {
-        city = matchingCity;
-        await fetchWeatherData(city); // Hava durumu verisini yükle
-      } else {
-        throw Exception('Şehir bulunamadı: $cityName');
-      }
+      await fetchWeatherData(cityName); // Hava durumu verisini yükle
     } catch (e) {
       print('Hata: $e'); // Hata durumunu logla
     } finally {
@@ -45,19 +38,6 @@ class _WeatherAppState extends State<WeatherApp> {
       });
     }
   }
-
-  Future<String?> _findMatchingCity(String cityName) async {
-    // JSON dosyasını oku
-    final contents = await rootBundle.loadString('assets/data/now_city_three.json');
-    final data = jsonDecode(contents);
-
-    // Girilen şehir adının ilk harflerine göre eşleşen bir şehir bul
-    return data.keys.firstWhere(
-          (key) => key.toLowerCase().startsWith(cityName.toLowerCase()),
-      orElse: () => null,
-    );
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -85,9 +65,10 @@ class _WeatherAppState extends State<WeatherApp> {
                   TextField(
                     controller: _controller,
                     onChanged: (value) {
-                      if (value.length >= 3) { // Kullanıcı en az 3 karakter yazdığında aramayı başlat
-                        _loadWeatherData(value);
-                      }
+                      setState(() {
+                        city = value.toLowerCase();
+                      });
+                      _loadWeatherData(city); // Yeni şehir için veriyi yükle
                     },
                     decoration: const InputDecoration(
                       suffixIcon: Icon(Icons.search),
@@ -99,7 +80,6 @@ class _WeatherAppState extends State<WeatherApp> {
                       ),
                     ),
                   ),
-
                   const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
