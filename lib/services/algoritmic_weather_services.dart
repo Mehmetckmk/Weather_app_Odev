@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart'; // JSON dosyasını okumak için gerekli
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart'; // Tarih formatlama işlemleri için gerekli
-import 'package:weather_app/anasayfa.dart'; // Hava durumu arayüzü için gerekli.
+import 'package:weather_app/screens/anasayfa/anasayfa.dart'; // Hava durumu arayüzü için gerekli.
 
 // WeatherData sınıfı, hava durumu verilerini alıp işleyecek olan StatelessWidget.
 class WeatherData extends StatelessWidget {

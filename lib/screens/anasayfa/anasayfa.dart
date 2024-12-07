@@ -2,6 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:weather_app/screens/giyim_screen/giyim_karsila.dart';
+
 
 class WeatherApp extends StatefulWidget {
   const WeatherApp({super.key});
@@ -205,6 +208,34 @@ class _WeatherAppState extends State<WeatherApp> {
                                 ),
                               ),
                             ),
+                            const SizedBox(height:100,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: (){
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(builder: (context) =>  GiyimKarsila()),
+                                    );
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    backgroundColor: Colors.white54,
+                                  ),
+                                  child: Text(
+                                    "Bugün Ne Giyeceğim?",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
                           ],
                         );
                       }
