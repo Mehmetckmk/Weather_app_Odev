@@ -37,6 +37,12 @@ dependencies:
   geolocator:
   permission_handler:
   lottie:
+  flutter_launcher_icons:
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo/logo.png"
+
   flutter_localizations:
     sdk: flutter
 

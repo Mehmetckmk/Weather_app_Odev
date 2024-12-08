@@ -42,7 +42,33 @@ class _OneriScreenState extends State<OneriScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(width: genislik-50,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 4,
+                          spreadRadius: 2,
+                        ),
+                      ],
+                    ),
+                    child:const  Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.black,
+                      size: 20,
+                    ),
+                  ),
+                ),
+                Container(
+                    width: genislik-70,
                     height: 70,
                     child: Image.asset("assets/images/logo/logoyatay.png",))
               ],

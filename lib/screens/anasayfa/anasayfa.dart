@@ -106,7 +106,7 @@ class _WeatherAppState extends State<WeatherApp> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 10),
                   // CircularProgressIndicator veya Hava Durumu Verisi
                   isLoading
                       ? const Center(child: CircularProgressIndicator()) // Yükleme göstergesi
@@ -118,7 +118,7 @@ class _WeatherAppState extends State<WeatherApp> {
                         return const Center(child: CircularProgressIndicator());
                       } else if (snapshot.hasError) {
                         // Hata durumunda kullanıcı dostu mesaj
-                        return const Center(child: Text('Hava durumu verisi alınamadı.'));
+                        return const Center(child: Text('Lütfen İl Giriniz.'));
                       } else if (!snapshot.hasData) {
                         // Eğer veri yoksa
                         return const Center(child: Text('Şehir verisi bulunamadı.'));
@@ -225,7 +225,7 @@ class _WeatherAppState extends State<WeatherApp> {
                               children: [
                                 ElevatedButton(
                                   onPressed: (){
-                                    Navigator.pushReplacement(
+                                    Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) =>  GiyimKarsila(Sicaklik: data["calculatedTemperature"],Nem: data["humidity"], Yagis: data["pressure"],)),
                                     );
