@@ -72,6 +72,7 @@ flutter:
     - assets/data/now_city_three.json
     - assets/data/three_city_last_year.json
     - assets/images/giyim/
+    - assets/images/logo/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

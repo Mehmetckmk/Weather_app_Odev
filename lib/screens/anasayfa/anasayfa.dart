@@ -63,14 +63,25 @@ class _WeatherAppState extends State<WeatherApp> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(width: genislik-50,
+                          height: 70,
+                          child: Image.asset("assets/images/logo/logoyatay.png",))
+                    ],
+                  ),
                   // Şehir adı girişi için TextField
                   TextField(
                     controller: _controller,
                     onChanged: (value) {
+                      // Boşluk kontrolü yap ve gereksiz boşlukları temizle
+                      final cleanedValue = value.replaceAll(RegExp(r'\s+'), ' ').trim();
+
                       setState(() {
-                        city = value.toLowerCase();
+                        city = cleanedValue.toLowerCase(); // Küçük harfe çevir
                       });
+
                       _loadWeatherData(city); // Yeni şehir için veriyi yükle
                     },
                     decoration: const InputDecoration(
@@ -98,19 +109,19 @@ class _WeatherAppState extends State<WeatherApp> {
                   const SizedBox(height: 40),
                   // CircularProgressIndicator veya Hava Durumu Verisi
                   isLoading
-                      ? Center(child: CircularProgressIndicator()) // Yükleme göstergesi
+                      ? const Center(child: CircularProgressIndicator()) // Yükleme göstergesi
                       : FutureBuilder<Map<String, dynamic>>(
                     future: fetchWeatherData(city),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         // Veriler yüklenirken yükleme göstergesi
-                        return Center(child: CircularProgressIndicator());
+                        return const Center(child: CircularProgressIndicator());
                       } else if (snapshot.hasError) {
                         // Hata durumunda kullanıcı dostu mesaj
-                        return Center(child: Text('Hava durumu verisi alınamadı.'));
+                        return const Center(child: Text('Hava durumu verisi alınamadı.'));
                       } else if (!snapshot.hasData) {
                         // Eğer veri yoksa
-                        return Center(child: Text('Şehir verisi bulunamadı.'));
+                        return const Center(child: Text('Şehir verisi bulunamadı.'));
                       } else {
                         var data = snapshot.data!;
 
@@ -208,7 +219,7 @@ class _WeatherAppState extends State<WeatherApp> {
                                 ),
                               ),
                             ),
-                            const SizedBox(height:100,),
+                            const SizedBox(height:70,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -216,14 +227,14 @@ class _WeatherAppState extends State<WeatherApp> {
                                   onPressed: (){
                                     Navigator.pushReplacement(
                                       context,
-                                      MaterialPageRoute(builder: (context) =>  GiyimKarsila()),
+                                      MaterialPageRoute(builder: (context) =>  GiyimKarsila(Sicaklik: data["calculatedTemperature"],Nem: data["humidity"], Yagis: data["pressure"],)),
                                     );
                                   },
                                   style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5),
                                     ),
-                                    backgroundColor: Colors.white54,
+                                    backgroundColor: Colors.white24,
                                   ),
                                   child: Text(
                                     "Bugün Ne Giyeceğim?",

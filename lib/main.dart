@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:weather_app/screens/anasayfa/anasayfa.dart';
-import 'package:weather_app/screens/giyim_screen/%C3%B6neri_Screen.dart';
-import 'package:weather_app/screens/giyim_screen/giyim_karsila.dart';
 import 'package:weather_app/screens/splash_screen/splash_screen.dart';
-import 'package:weather_app/services/algoritmic_weather_services.dart';
-
 void main() {
   runApp(const MyApp());
   //Ekranı odaklayıp durum çubuklarını gizleme
@@ -35,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Splash (),
+      home:  const Splash (),
     );
   }
 }
